@@ -1,0 +1,10 @@
+{
+  "total_episodes": 2,
+  "detected_early": 2,
+  "detected_during": 0,
+  "missed": 0,
+  "warning_rate": 1.0,
+  "mean_ewt_seconds": 100.0,
+  "median_ewt_seconds": 100.0,
+  "max_ewt_seconds": 100.0
+}
