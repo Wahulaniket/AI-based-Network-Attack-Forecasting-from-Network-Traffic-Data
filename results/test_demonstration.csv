@@ -1,0 +1,6 @@
+step,timestamp,predicted_prob,risk_score,risk_level,predicted_stage,ground_truth,predicted_label
+t+1,2018-02-28 01:41:30,0.6664,67.0,HIGH,Reconnaissance,BENIGN,ATTACK
+t+2,2018-02-28 01:41:40,0.8072,81.0,CRITICAL,Reconnaissance,BENIGN,ATTACK
+t+3,2018-02-28 01:41:50,0.9175,92.0,CRITICAL,Reconnaissance,BENIGN,ATTACK
+t+4,2018-02-28 01:42:00,0.9867,99.0,CRITICAL,Reconnaissance,BENIGN,ATTACK
+t+5,2018-02-28 01:42:10,0.998,100.0,CRITICAL,Reconnaissance,ATTACK,ATTACK

@@ -1,0 +1,128 @@
+{
+  "statement": "Thresholds were selected exclusively on validation data. Test labels were not used for threshold selection.",
+  "research_threshold": {
+    "value": 0.72,
+    "selection_method": "F1-optimal on validation set",
+    "validation_metrics": {
+      "precision": 0.3712121212121212,
+      "recall": 0.15960912052117263,
+      "f1": 0.22323462414578588,
+      "fpr": 0.0205242334322453,
+      "fnr": 0.8403908794788274
+    },
+    "test_metrics": {
+      "precision": 0.533585619678335,
+      "recall": 0.706766917293233,
+      "f1": 0.6080862533692722,
+      "roc_auc": 0.8633385306259459,
+      "pr_auc": 0.7117341324363442,
+      "fpr": 0.13871693866066404,
+      "fnr": 0.2932330827067669,
+      "TP": 564,
+      "TN": 3061,
+      "FP": 493,
+      "FN": 234
+    }
+  },
+  "youdens_j_threshold": {
+    "value": 0.45,
+    "selection_method": "Youden's J (recall - FPR) optimal on validation set",
+    "validation_metrics": {
+      "precision": 0.13620071684587814,
+      "recall": 0.495114006514658,
+      "f1": 0.213633169360506,
+      "fpr": 0.23837784371909002,
+      "fnr": 0.504885993485342,
+      "youdens_j": 0.256736162795568
+    }
+  },
+  "operational_threshold": {
+    "value": 0.45,
+    "selection_method": "Youden's J fallback: recall >= 0.90 required FPR >= 74% on validation, so fell back to Youden's J (max recall - FPR) as best available tradeoff",
+    "recall_90_achievable_at_reasonable_fpr": false,
+    "validation_metrics": {
+      "precision": 0.13620071684587814,
+      "recall": 0.495114006514658,
+      "f1": 0.213633169360506,
+      "fpr": 0.23837784371909002,
+      "fnr": 0.504885993485342
+    },
+    "test_metrics": {
+      "precision": 0.23487332339791356,
+      "recall": 0.9874686716791979,
+      "f1": 0.37948470984830246,
+      "roc_auc": 0.8633385306259459,
+      "pr_auc": 0.7117341324363442,
+      "fpr": 0.7222847495779403,
+      "fnr": 0.012531328320802004,
+      "TP": 788,
+      "TN": 987,
+      "FP": 2567,
+      "FN": 10
+    }
+  },
+  "lr_baseline": {
+    "threshold": 0.5,
+    "test_metrics": {
+      "precision": 0.26397869912514266,
+      "recall": 0.8696741854636592,
+      "f1": 0.4050189670265538,
+      "roc_auc": 0.731875411658014,
+      "pr_auc": 0.4050089179518536,
+      "fpr": 0.544456949915588,
+      "fnr": 0.13032581453634084,
+      "TP": 694,
+      "TN": 1619,
+      "FP": 1935,
+      "FN": 104
+    }
+  },
+  "early_warning": {
+    "operational_threshold": {
+      "threshold": 0.45,
+      "total_episodes": 2,
+      "detected_early": 2,
+      "detected_during": 0,
+      "missed": 0,
+      "warning_rate": 1.0,
+      "detection_rate": 1.0,
+      "mean_ewt_seconds": 100.0,
+      "median_ewt_seconds": 100.0,
+      "max_ewt_seconds": 100.0
+    },
+    "research_threshold": {
+      "threshold": 0.72,
+      "total_episodes": 2,
+      "detected_early": 2,
+      "detected_during": 0,
+      "missed": 0,
+      "warning_rate": 1.0,
+      "detection_rate": 1.0,
+      "mean_ewt_seconds": 65.0,
+      "median_ewt_seconds": 65.0,
+      "max_ewt_seconds": 100.0
+    }
+  },
+  "false_positive_analysis": {
+    "operational": {
+      "threshold": 0.45,
+      "total_benign": 3554,
+      "false_positives": 2567,
+      "true_negatives": 987,
+      "fp_rate": 0.7222847495779403,
+      "fp_near_attack": 40,
+      "fp_far_from_attack": 2527
+    },
+    "research": {
+      "threshold": 0.72,
+      "total_benign": 3554,
+      "false_positives": 493,
+      "true_negatives": 3061,
+      "fp_rate": 0.13871693866066404,
+      "fp_near_attack": 24,
+      "fp_far_from_attack": 469
+    }
+  },
+  "eligible_test_episodes": 10,
+  "demo_timestamp": "2018-02-28 01:41:20"
+}

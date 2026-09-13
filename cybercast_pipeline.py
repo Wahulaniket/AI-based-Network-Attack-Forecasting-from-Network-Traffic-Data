@@ -202,6 +202,8 @@ def inspect_file_chunked(csv_path, chunk_size=CHUNK_SIZE):
     nan_count = 0
     inf_count = 0
     dup_count = 0
+    invalid_count = 0
+    out_of_range_count = 0
 
     for chunk in pd.read_csv(csv_path, chunksize=chunk_size, low_memory=False):
         chunk.columns = chunk.columns.str.strip()
@@ -217,7 +219,17 @@ def inspect_file_chunked(csv_path, chunk_size=CHUNK_SIZE):
         if 'Timestamp' in chunk.columns:
             ts = pd.to_datetime(chunk['Timestamp'], format='mixed',
                                 dayfirst=True, errors='coerce')
+            
+            invalid_count += int(ts.isna().sum())
             valid = ts.dropna()
+            
+            # Robust filter for CIC-IDS2018 known date range
+            VALID_DATE_START = pd.Timestamp('2018-02-14 00:00:00')
+            VALID_DATE_END   = pd.Timestamp('2018-03-02 23:59:59.999999')
+            in_range = (valid >= VALID_DATE_START) & (valid <= VALID_DATE_END)
+            out_of_range_count += int((~in_range).sum())
+            valid = valid[in_range]
+            
             if len(valid) > 0:
                 cmin, cmax = valid.min(), valid.max()
                 ts_min = min(ts_min, cmin) if ts_min is not None else cmin
@@ -248,6 +260,8 @@ def inspect_file_chunked(csv_path, chunk_size=CHUNK_SIZE):
         'label_distribution': dict(label_counts),
         'nan_count': nan_count, 'inf_count': inf_count,
         'duplicate_count': dup_count,
+        'invalid_ts_count': invalid_count,
+        'out_of_range_ts_count': out_of_range_count,
     }
 
 print("\n" + "=" * 80)
@@ -279,6 +293,8 @@ for fpath in csv_files:
           f"Attack: {rpt['attack_pct']:>6.2f}%  |  "
           f"Dates: {rpt['timestamp_min'][:10] if rpt['timestamp_min']!='N/A' else '?'} → "
           f"{rpt['timestamp_max'][:10] if rpt['timestamp_max']!='N/A' else '?'}")
+    if rpt.get('invalid_ts_count', 0) > 0 or rpt.get('out_of_range_ts_count', 0) > 0:
+        print(f"    ⚠️  Invalid TS: {rpt.get('invalid_ts_count', 0):,} | Out-of-range (e.g. 1970): {rpt.get('out_of_range_ts_count', 0):,}")
 
 # Save per-file report
 pd.DataFrame(file_reports).to_csv(RESULTS_DIR / 'data_quality_by_file.csv', index=False)
@@ -343,6 +359,11 @@ def clean_chunk(chunk):
         chunk['Timestamp'], format='mixed', dayfirst=True, errors='coerce'
     )
     chunk = chunk.dropna(subset=['Timestamp'])
+    
+    # Filter valid dates explicitly
+    VALID_DATE_START = pd.Timestamp('2018-02-14 00:00:00')
+    VALID_DATE_END   = pd.Timestamp('2018-03-02 23:59:59.999999')
+    chunk = chunk[(chunk['Timestamp'] >= VALID_DATE_START) & (chunk['Timestamp'] <= VALID_DATE_END)]
 
     # Binary attack target
     chunk['Attack'] = (chunk['Label'].astype(str).str.strip() != 'Benign').astype(np.int8)
@@ -536,6 +557,17 @@ assert len(overlap) == 0, f"FATAL LEAKAGE: {overlap} in model features!"
 print(f"\n  ✅ Model features: {len(MODEL_FEATURE_COLUMNS)} (leakage check PASSED)")
 
 STATE_DIM = len(MODEL_FEATURE_COLUMNS)
+
+print("\n" + "=" * 60)
+print("  FEATURE COUNT SANITY CHECK")
+print("=" * 60)
+print(f"Number of raw columns: {len(_sample_cols)}")
+print(f"Number of observable features: {len(AVAILABLE_FEATURES)}")
+print(f"Number of final model features: {len(MODEL_FEATURE_COLUMNS)}")
+print(f"State dimension: {STATE_DIM}")
+print("\nFinal model feature list:")
+for i, f in enumerate(MODEL_FEATURE_COLUMNS):
+    print(f"  {i+1:2d}. {f}")
 
 # %%
 # ============================================================
@@ -738,6 +770,67 @@ print(f"  pos_weight: {pos_weight_value:.4f}")
 state_loss_fn  = nn.MSELoss()
 attack_loss_fn = nn.BCEWithLogitsLoss(pos_weight=pos_weight_tensor)
 optimizer      = torch.optim.Adam(model.parameters(), lr=LEARNING_RATE)
+
+print("\n" + "=" * 60)
+print("  DATASET IMBALANCE SANITY CHECK")
+print("=" * 60)
+print("RAW FLOWS")
+print(f"Benign: {global_benign:,}")
+print(f"Attack: {global_attack:,}")
+print(f"Attack %: {global_attack/max(total_raw_rows, 1)*100:.2f}%")
+print(f"Ratio: {global_benign / max(global_attack, 1):.2f}\n")
+
+print("WINDOWS")
+print(f"Benign: {n_states - n_attack_win:,}")
+print(f"Attack: {n_attack_win:,}")
+print(f"Attack %: {n_attack_win/max(n_states, 1)*100:.2f}%")
+print(f"Ratio: {(n_states - n_attack_win) / max(n_attack_win, 1):.2f}\n")
+
+fc_pos = int(y_train[SEQUENCE_LENGTH:].sum()) + int(y_val[SEQUENCE_LENGTH:].sum()) + int(y_test[SEQUENCE_LENGTH:].sum())
+fc_neg = (len(y_train) + len(y_val) + len(y_test) - 3 * SEQUENCE_LENGTH) - fc_pos
+print("FORECAST TARGET")
+print(f"Negative: {fc_neg:,}")
+print(f"Positive: {fc_pos:,}")
+print(f"Positive %: {fc_pos / max(fc_pos + fc_neg, 1) * 100:.2f}%")
+print(f"Ratio: {fc_neg / max(fc_pos, 1):.2f}\n")
+
+print("TRAIN")
+n_pos_tr = int(y_train[SEQUENCE_LENGTH:].sum())
+n_neg_tr = len(y_train) - SEQUENCE_LENGTH - n_pos_tr
+print(f"Negative: {n_neg_tr:,}")
+print(f"Positive: {n_pos_tr:,}")
+print(f"Positive %: {n_pos_tr / max(n_pos_tr + n_neg_tr, 1) * 100:.2f}%")
+print(f"pos_weight: {pos_weight_value:.4f}\n")
+
+print("VALIDATION")
+n_pos_v = int(y_val[SEQUENCE_LENGTH:].sum())
+n_neg_v = len(y_val) - SEQUENCE_LENGTH - n_pos_v
+print(f"Negative: {n_neg_v:,}")
+print(f"Positive: {n_pos_v:,}")
+print(f"Positive %: {n_pos_v / max(n_pos_v + n_neg_v, 1) * 100:.2f}%\n")
+
+print("TEST")
+n_pos_te = int(y_test[SEQUENCE_LENGTH:].sum())
+n_neg_te = len(y_test) - SEQUENCE_LENGTH - n_pos_te
+print(f"Negative: {n_neg_te:,}")
+print(f"Positive: {n_pos_te:,}")
+print(f"Positive %: {n_pos_te / max(n_pos_te + n_neg_te, 1) * 100:.2f}%\n")
+
+print("=" * 60)
+print("  ATTACK EPISODE SANITY CHECK")
+print("=" * 60)
+print("Attack episodes by date")
+for split_name, states_df in [('TRAIN', train_states), ('VALIDATION', val_states), ('TEST', test_states)]:
+    print(f"\n{split_name} SPLIT:")
+    date_grp = states_df[states_df['binary_attack'] == 1].groupby('date')
+    if len(date_grp) == 0:
+        print("  NO ATTACKS IN THIS SPLIT!")
+    for dt, grp in date_grp:
+        windows = grp['Timestamp'].sort_values().values
+        if len(windows) == 0: continue
+        diffs = (windows[1:] - windows[:-1]) / np.timedelta64(1, 's')
+        episodes = 1 + np.sum(diffs > WINDOW_SECONDS * 5)
+        print(f"  {dt}: {episodes} episodes, {len(grp)} windows")
 
 # %%
 # ============================================================
