@@ -1,0 +1,9 @@
+{
+    "Config": {
+        "History_Length": 20,
+        "Feature_Set": "SET_A"
+    },
+    "Test_PR_AUC": 0.5570971598754473,
+    "Test_F1": 0.4592274678111588,
+    "Best_Threshold": 0.9796565771102905
+}

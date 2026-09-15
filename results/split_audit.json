@@ -1,0 +1,5 @@
+{
+    "train_windows": 20104,
+    "val_windows": 4308,
+    "test_windows": 4308
+}

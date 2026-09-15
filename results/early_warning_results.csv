@@ -1,0 +1,8 @@
+metric,value
+episodes_total,5.0
+detected_early,5.0
+detected_after_onset,0.0
+missed,0.0
+mean_warning_s,14798.0
+median_warning_s,550.0
+max_warning_s,50690.0

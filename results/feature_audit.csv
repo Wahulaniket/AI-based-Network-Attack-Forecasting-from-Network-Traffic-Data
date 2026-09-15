@@ -1,0 +1,16 @@
+feature,source,type,uses_label,uses_future_data,valid
+Flow Duration,raw,numeric,False,False,True
+Tot Fwd Pkts,raw,numeric,False,False,True
+Tot Bwd Pkts,raw,numeric,False,False,True
+TotLen Fwd Pkts,raw,numeric,False,False,True
+TotLen Bwd Pkts,raw,numeric,False,False,True
+Flow Byts/s,raw,numeric,False,False,True
+Flow Pkts/s,raw,numeric,False,False,True
+Fwd Pkt Len Mean,raw,numeric,False,False,True
+Bwd Pkt Len Mean,raw,numeric,False,False,True
+SYN Flag Cnt,raw,numeric,False,False,True
+ACK Flag Cnt,raw,numeric,False,False,True
+FIN Flag Cnt,raw,numeric,False,False,True
+RST Flag Cnt,raw,numeric,False,False,True
+PSH Flag Cnt,raw,numeric,False,False,True
+URG Flag Cnt,raw,numeric,False,False,True
