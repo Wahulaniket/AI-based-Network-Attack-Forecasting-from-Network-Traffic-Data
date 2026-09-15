@@ -1,0 +1,96 @@
+feature,source,formula/description,uses_future_data,target_derived,allowed,reason
+Timestamp,network_states_10s.parquet,Metadata/Label,False,True,False,Metadata (time)
+Dst Port,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Protocol,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Flow Duration,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Tot Fwd Pkts,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Tot Bwd Pkts,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+TotLen Fwd Pkts,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+TotLen Bwd Pkts,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Fwd Pkt Len Max,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Fwd Pkt Len Min,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Fwd Pkt Len Mean,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Fwd Pkt Len Std,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Bwd Pkt Len Max,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Bwd Pkt Len Min,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Bwd Pkt Len Mean,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Bwd Pkt Len Std,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Flow Byts/s,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Flow Pkts/s,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Flow IAT Mean,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Flow IAT Std,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Flow IAT Max,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Flow IAT Min,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Fwd IAT Tot,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Fwd IAT Mean,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Fwd IAT Std,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Fwd IAT Max,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Fwd IAT Min,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Bwd IAT Tot,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Bwd IAT Mean,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Bwd IAT Std,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Bwd IAT Max,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Bwd IAT Min,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Fwd PSH Flags,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Bwd PSH Flags,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Fwd URG Flags,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Bwd URG Flags,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Fwd Header Len,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Bwd Header Len,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Fwd Pkts/s,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Bwd Pkts/s,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Pkt Len Min,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Pkt Len Max,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Pkt Len Mean,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Pkt Len Std,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Pkt Len Var,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+FIN Flag Cnt,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+SYN Flag Cnt,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+RST Flag Cnt,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+PSH Flag Cnt,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+ACK Flag Cnt,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+URG Flag Cnt,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+CWE Flag Count,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+ECE Flag Cnt,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Down/Up Ratio,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Pkt Size Avg,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Fwd Seg Size Avg,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Bwd Seg Size Avg,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Fwd Byts/b Avg,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Fwd Pkts/b Avg,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Fwd Blk Rate Avg,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Bwd Byts/b Avg,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Bwd Pkts/b Avg,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Bwd Blk Rate Avg,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Subflow Fwd Pkts,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Subflow Fwd Byts,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Subflow Bwd Pkts,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Subflow Bwd Byts,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Init Fwd Win Byts,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Init Bwd Win Byts,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Fwd Act Data Pkts,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Fwd Seg Size Min,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Active Mean,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Active Std,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Active Max,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Active Min,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Idle Mean,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Idle Std,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Idle Max,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Idle Min,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Fwd_Bwd_Pkt_Ratio,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Fwd_Bwd_Byte_Ratio,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Total_Pkts,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Total_Bytes,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Avg_Pkt_Size,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Pkts_Per_Sec,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Bytes_Per_Sec,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+SYN_FIN_Ratio,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+RST_SYN_Ratio,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+Fwd_Pkt_Proportion,network_states_10s.parquet,Raw column,False,False,True,Raw or engineered traffic statistic
+flow_count,network_states_10s.parquet,Raw column,False,False,True,Legitimate causal flow aggregate
+attack_flow_count,network_states_10s.parquet,Metadata/Label,False,True,False,Target-derived or Metadata
+attack_ratio,network_states_10s.parquet,Metadata/Label,False,True,False,Target-derived or Metadata
+binary_attack,network_states_10s.parquet,Metadata/Label,False,True,False,Target-derived or Metadata
+dominant_label,network_states_10s.parquet,Metadata/Label,False,True,False,Target-derived or Metadata
+has_traffic,network_states_10s.parquet,Metadata/Label,False,True,False,Target-derived or Metadata
