@@ -1,0 +1,5 @@
+Phase,Model_Name,Artifact_Path,Training_Source,Feature_Set,Sequence_Length,Test_PR_AUC,Status
+Phase 2,Phase 2 LSTM,models/archive/model_SET_R_h20.pt,MISSING (notebooks show only results),~70 features,20,0.7371,LEGACY (Missing provenance)
+Phase 2.1,Dual-head LSTM World Model,models/archive/best_world_model.pt,MISSING (notebooks show only results),state_dim (feature_names.json),10,0.4994 (Val),LEGACY (Missing provenance)
+Phase 2.2,Phase 2.2 Champion,results/phase2_2/models/model_20_SET_B.pt,scripts/phase2_2_experiments.py,15 features (SET_B),20,0.5571,CONFIRMED (Archived)
+Phase 2.3,Phase 2.3 Champion,models/production/model_SET_R_h20.pt,scripts/phase2_3_experiments.py,89 features (SET_R),20,0.6887 (Estimated),CONFIRMED (Production)

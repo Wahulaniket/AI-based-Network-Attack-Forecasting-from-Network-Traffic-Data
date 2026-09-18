@@ -1,0 +1,54 @@
+# Review Required Files
+
+| PATH | TYPE | WHY UNCLASSIFIED | DEPENDENCIES | RECOMMENDED ACTION |
+|------|------|------------------|--------------|--------------------|
+| audit_metrics.json | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| audit_script.py | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| create_pipeline_notebook.py | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| generate_notebook.py | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| configs\config.py | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| configs\config.yaml | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| configs\model_config.yaml | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| dashboard\app.py | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| dashboard\ui\.oxlintrc.json | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| dashboard\ui\index.html | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| dashboard\ui\tsconfig.app.json | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| dashboard\ui\tsconfig.json | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| dashboard\ui\tsconfig.node.json | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| dashboard\ui\vite.config.ts | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| dashboard\ui\dist\favicon.svg | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| dashboard\ui\dist\icons.svg | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| dashboard\ui\dist\index.html | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| dashboard\ui\dist\assets\index-C-Sye3Ls.js | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| dashboard\ui\dist\assets\index-OY4EDgWk.css | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| data\raw\archive.zip | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| data\raw\ids-intrusion-csv.zip | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| docs\models\model_inventory.csv | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| evaluation\metrics.py | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| evaluation\__init__.py | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| figures\calibration_curve.png | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| figures\confusion_matrix.png | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| figures\feature_importance.png | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| figures\phase2_1_confusion_matrix.png | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| figures\phase2_1_training_curves.png | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| figures\training_curves.png | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| figures\validation_pr_curve.png | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| figures\validation_roc_curve.png | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| figures\phase2_3\early_warning_degradation.png | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| forecasting\risk_scoring.py | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| forecasting\simulator.py | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| forecasting\stage_mapping.py | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| forecasting\__init__.py | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| models\baseline.py | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| models\config.json | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| models\cybercast_best_model_config.json | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| models\feature_names.json | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| models\lstm_model.py | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| models\train.py | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| models\__init__.py | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| models\phase2_1\best_model_config.json | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| plots\global_label_distribution.png | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| preprocessing\flow_features.py | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| preprocessing\packet_features.py | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| preprocessing\windows.py | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |
+| preprocessing\__init__.py | UNKNOWN | Unmatched by core pipeline regex | TBD | Leave untouched |

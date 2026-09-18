@@ -4,7 +4,7 @@ import json
 # Define the paths for the frozen artifacts
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 PHASE2_3_RESULTS_DIR = os.path.join(REPO_ROOT, "results", "phase2_3")
-PHASE2_3_MODELS_DIR = os.path.join(REPO_ROOT, "models", "phase2_3")
+PHASE2_3_MODELS_DIR = os.path.join(REPO_ROOT, "models", "production")
 
 # We dynamically load the true configurations from the champion metrics so they are not hardcoded
 _champion_metrics_path = os.path.join(PHASE2_3_RESULTS_DIR, "champion_metrics.json")

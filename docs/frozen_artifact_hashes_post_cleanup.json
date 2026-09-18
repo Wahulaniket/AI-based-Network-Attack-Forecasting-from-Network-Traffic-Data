@@ -1,0 +1,6 @@
+{
+    "models/production/model_SET_R_h20.pt": "66e70b5b1bdafe861ceecff19ca995e702ea34f8fc5a15feefbd1846340a73ec",
+    "models/production/scaler_SET_R_h20.joblib": "befc139033dddcef3d5a6c393fe84aac8be2a6c2a40c0c9465e0ae5b9bdd2f6d",
+    "results/phase2_3/feature_sets.json": "0356c2944291ed2aedafcde04091e2446cec294301a2abdca2e08a7db0f6e528",
+    "results/phase2_3/champion_metrics.json": "e3f900587183a794f21a9f885eb56c0b9e9d0037a0c5cb797386e5fc541c19a5"
+}

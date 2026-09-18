@@ -24,8 +24,8 @@ def get_hash(filepath):
 
 def run_experiment():
     print("Hashing frozen artifacts...")
-    model_path = 'models/phase2_3/model_SET_R_h20.pt'
-    scaler_path = 'models/phase2_3/scaler_SET_R_h20.joblib'
+    model_path = 'models/production/model_SET_R_h20.pt'
+    scaler_path = 'models/production/scaler_SET_R_h20.joblib'
     metrics_path = 'results/phase2_3/champion_metrics.json'
     
     hash_model_before = get_hash(model_path)

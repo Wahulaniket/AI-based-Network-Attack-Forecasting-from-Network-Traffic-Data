@@ -1,0 +1,35 @@
+current_path,filename,file_size,SHA256,architecture,phase,experiment,feature_set,history_length,referenced_production,referenced_dashboard,referenced_notebooks,classification
+models/best_world_model.pt,best_world_model.pt,1126577,d8bbb85ce13842d1933e986a29cb83a411e03b5da8a12726d28e2da7f71b7c11,LSTM,Phase 1 / Legacy,LEGACY,Unknown,Unknown,False,False,True,LEGACY
+models/cybercast_best_model.pt,cybercast_best_model.pt,227713,dcc6b38e156eb594271732f21f030266949c37570427a9c769a45e8058649628,LSTM,Phase 1 / Legacy,LEGACY,Unknown,Unknown,False,False,True,LEGACY
+models/phase2_1/best_model.pt,best_model.pt,227559,ccabf2724f31dbf8d8e666dc21fe4d07abba90a58b596954d443c6d5f7b509cc,LSTM,Phase 2.1,LEGACY,Unknown,Unknown,False,False,True,LEGACY
+models/phase2_3/model_SET_A_h20.pt,model_SET_A_h20.pt,218764,c8c1e405404471daa52ef7c9f6c8a2bb22c381cfaafc84ce85d8633f27370a47,LSTM,Phase 2.3,BASELINE,SET_A,20,False,False,True,BASELINE
+models/phase2_3/model_SET_R_h10.pt,model_SET_R_h10.pt,294604,42b1003770b755c2db40023f303b25f8016623633d98e10deaae9e9ccc90a47b,LSTM,Phase 2.3,EXPERIMENTAL,SET_R,10,False,False,True,EXPERIMENTAL
+models/phase2_3/model_SET_R_h20.pt,model_SET_R_h20.pt,294604,66e70b5b1bdafe861ceecff19ca995e702ea34f8fc5a15feefbd1846340a73ec,LSTM,Phase 2.3,PRODUCTION_FROZEN,SET_R,20,True,False,True,PRODUCTION_FROZEN
+models/phase2_3/model_SET_R_h30.pt,model_SET_R_h30.pt,294604,9b8ebb943751e7820b8acb3819fa7f510ef3094e9886be6bf16d3df5ce633685,LSTM,Phase 2.3,EXPERIMENTAL,SET_R,30,False,False,True,EXPERIMENTAL
+models/phase2_3/model_SET_R_h5.pt,model_SET_R_h5.pt,294597,a4a8d17a3d5a6ac0a75a5375ca25810f6f0b3177381feee96d16bc2284c8cb79,LSTM,Phase 2.3,EXPERIMENTAL,SET_R,5,False,False,True,EXPERIMENTAL
+models/phase2_3/model_SET_R_Repro_1_h20.pt,model_SET_R_Repro_1_h20.pt,294724,990f53b4fcdf41b8f2b7d2a7520404d8be117de1d0a0f043fd2b17b04a262786,LSTM,Phase 2.3,EXPERIMENTAL,SET_R,20,False,False,False,EXPERIMENTAL
+models/phase2_3/model_SET_R_Repro_2_h20.pt,model_SET_R_Repro_2_h20.pt,294724,94ffb6aa65fd23a43d0d046347807085c50df3f21a711bda65d486627e37e42e,LSTM,Phase 2.3,EXPERIMENTAL,SET_R,20,False,False,False,EXPERIMENTAL
+models/phase2_3/model_SET_R_SELECT_h20.pt,model_SET_R_SELECT_h20.pt,244541,d4a8df1ee1f498f20c5e15ddd9629556d2cfa169fa50c0127c44ecb44438c7f5,LSTM,Phase 2.3,BASELINE,SET_R_SELECT,20,False,False,True,BASELINE
+results/phase2_2/models/model_10_SET_A.pt,model_10_SET_A.pt,218757,5e5d72afba32abd09d4a11e2a3c621fe9537fcb800c6e573cb95d584dc18cf16,LSTM,Phase 2.2,EXPERIMENTAL,SET_A,10,False,False,False,EXPERIMENTAL
+results/phase2_2/models/model_10_SET_B.pt,model_10_SET_B.pt,234117,eb1b389ff4deb0ec294f44e8508331e54dce3fcef3d9ad8d2662ba2458787b58,LSTM,Phase 2.2,EXPERIMENTAL,SET_B,10,False,False,False,EXPERIMENTAL
+results/phase2_2/models/model_10_SET_C.pt,model_10_SET_C.pt,239237,f2a0d86f5e92f6967ef045f9979bf806cacb826157499786c12a1f02e6cebc41,LSTM,Phase 2.2,EXPERIMENTAL,SET_C,10,False,False,False,EXPERIMENTAL
+results/phase2_2/models/model_20_SET_A.pt,model_20_SET_A.pt,218757,caa25b2842dca47fe8043861022ad1e3bd7cf43660d3be0f7826c166041262c9,LSTM,Phase 2.2,EXPERIMENTAL,SET_A,20,False,False,False,EXPERIMENTAL
+results/phase2_2/models/model_20_SET_B.pt,model_20_SET_B.pt,234117,a1775923fd639984c26a73309f8e4612e56dffe6d74bb70057d1a437b9694361,LSTM,Phase 2.2,EXPERIMENTAL,SET_B,20,False,False,False,EXPERIMENTAL
+results/phase2_2/models/model_20_SET_C.pt,model_20_SET_C.pt,239237,0bfce778e5b946f2d9c76e906d2e69bb24ebb231af9760231c6d73f5e9f5f899,LSTM,Phase 2.2,EXPERIMENTAL,SET_C,20,False,False,False,EXPERIMENTAL
+results/phase2_2/models/model_30_SET_A.pt,model_30_SET_A.pt,218757,83d382bcf81a18e7458f3f423d79e13c47338eaeb21ce312f991c5fc9dacae2b,LSTM,Phase 2.2,EXPERIMENTAL,SET_A,30,False,False,False,EXPERIMENTAL
+results/phase2_2/models/model_30_SET_B.pt,model_30_SET_B.pt,234117,7cfffee36ab3c045ab94b32543cd6d22a9d3743926ee30ab15d959aa2cae02c9,LSTM,Phase 2.2,EXPERIMENTAL,SET_B,30,False,False,False,EXPERIMENTAL
+results/phase2_2/models/model_30_SET_C.pt,model_30_SET_C.pt,239237,f799197efa906e462832c53e7379e5b5db2614437775adee0270a26cdc507203,LSTM,Phase 2.2,EXPERIMENTAL,SET_C,30,False,False,False,EXPERIMENTAL
+results/phase2_2/models/model_5_SET_A.pt,model_5_SET_A.pt,218750,e7bb3565d050652ff9490a32a18ef04bd498f056ba56c08932cc69c8ef5d3269,LSTM,Phase 2.2,EXPERIMENTAL,SET_A,5,False,False,False,EXPERIMENTAL
+results/phase2_2/models/model_5_SET_B.pt,model_5_SET_B.pt,234110,925d4ee48ec19731fb310f2af55adba1977ab9f75c6d220ee11ad7a5335e0eb5,LSTM,Phase 2.2,EXPERIMENTAL,SET_B,5,False,False,False,EXPERIMENTAL
+results/phase2_2/models/model_5_SET_C.pt,model_5_SET_C.pt,239230,f6d9d3fe1a3348b4631a89f0bb1919dfc5ab1bb7b8a2f597c3cb9041dea07c9d,LSTM,Phase 2.2,EXPERIMENTAL,SET_C,5,False,False,False,EXPERIMENTAL
+models/phase2_3/scaler_SET_A_h20.joblib,scaler_SET_A_h20.joblib,927,9aebef61732ed0fc338a6e55ccab5c7f170f9004d3fef9f755709c9dc4b331dc,Scaler,Phase 2.3,BASELINE,SET_A,20,False,False,False,BASELINE
+models/phase2_3/scaler_SET_R_h10.joblib,scaler_SET_R_h10.joblib,2703,befc139033dddcef3d5a6c393fe84aac8be2a6c2a40c0c9465e0ae5b9bdd2f6d,Scaler,Phase 2.3,EXPERIMENTAL,SET_R,10,False,False,False,EXPERIMENTAL
+models/phase2_3/scaler_SET_R_h20.joblib,scaler_SET_R_h20.joblib,2703,befc139033dddcef3d5a6c393fe84aac8be2a6c2a40c0c9465e0ae5b9bdd2f6d,Scaler,Phase 2.3,DUPLICATE,SET_R,20,True,False,False,DUPLICATE
+models/phase2_3/scaler_SET_R_h30.joblib,scaler_SET_R_h30.joblib,2703,befc139033dddcef3d5a6c393fe84aac8be2a6c2a40c0c9465e0ae5b9bdd2f6d,Scaler,Phase 2.3,DUPLICATE,SET_R,30,False,False,False,DUPLICATE
+models/phase2_3/scaler_SET_R_h5.joblib,scaler_SET_R_h5.joblib,2703,befc139033dddcef3d5a6c393fe84aac8be2a6c2a40c0c9465e0ae5b9bdd2f6d,Scaler,Phase 2.3,DUPLICATE,SET_R,5,False,False,False,DUPLICATE
+models/phase2_3/scaler_SET_R_Repro_1_h20.joblib,scaler_SET_R_Repro_1_h20.joblib,2703,befc139033dddcef3d5a6c393fe84aac8be2a6c2a40c0c9465e0ae5b9bdd2f6d,Scaler,Phase 2.3,DUPLICATE,SET_R,20,False,False,False,DUPLICATE
+models/phase2_3/scaler_SET_R_Repro_2_h20.joblib,scaler_SET_R_Repro_2_h20.joblib,2703,befc139033dddcef3d5a6c393fe84aac8be2a6c2a40c0c9465e0ae5b9bdd2f6d,Scaler,Phase 2.3,DUPLICATE,SET_R,20,False,False,False,DUPLICATE
+models/phase2_3/scaler_SET_R_SELECT_h20.joblib,scaler_SET_R_SELECT_h20.joblib,1543,fd169c2d76ab536cd6bccc7d6be682caed1e37f47f8289a135fe2edf10a77375,Scaler,Phase 2.3,BASELINE,SET_R_SELECT,20,False,False,False,BASELINE
+models/feature_scaler.pkl,feature_scaler.pkl,1100,c3c4a93ff99ba85858aa525c54d0cff66d49f682e56bdcd59ec6fd2210a49127,Scaler,Phase 1 / Legacy,LEGACY,Unknown,Unknown,False,False,True,LEGACY
+models/logistic_regression.pkl,logistic_regression.pkl,1583,4d67a735fbc5a59b9af6043bc355b6b1dbdd94b79b2ac8ee8a1bc4cd56da41dd,Scaler,Phase 1 / Legacy,LEGACY,Unknown,Unknown,False,False,True,LEGACY
+models/scaler.pkl,scaler.pkl,2703,785befe54c583d189b3d8e63be72d2cf7c4775cbcb404de6c295acdd2622ff3d,Scaler,Phase 1 / Legacy,LEGACY,Unknown,Unknown,False,False,True,LEGACY

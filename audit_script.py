@@ -88,7 +88,7 @@ def run_audit():
     test_loader = DataLoader(test_dataset, batch_size=128, shuffle=False)
 
     model = CyberCastForecaster(input_size=15, hidden_size=64, num_layers=2).to(device)
-    model.load_state_dict(torch.load('results/phase2_2/models/model_20_SET_A.pt', weights_only=True))
+    model.load_state_dict(torch.load('models/archive/model_20_SET_A.pt', weights_only=True))
     
     val_preds, val_true = evaluate(model, val_loader, device)
     test_preds, test_true = evaluate(model, test_loader, device)

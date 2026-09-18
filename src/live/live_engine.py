@@ -498,5 +498,11 @@ class LiveEngine:
             "idle_max": "Idle Max",
             "idle_min": "Idle Min"
         }
-        df = df.rename(columns=mapping)
+        for cic_col, set_r_col in mapping.items():
+            if cic_col in df.columns:
+                if set_r_col in df.columns:
+                    df[set_r_col] = df[set_r_col].fillna(df[cic_col])
+                    df = df.drop(columns=[cic_col])
+                else:
+                    df = df.rename(columns={cic_col: set_r_col})
         return df

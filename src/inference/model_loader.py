@@ -48,8 +48,8 @@ def load_inference_artifacts(repo_root: str):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     
     # Paths
-    model_path = os.path.join(repo_root, 'models', 'phase2_3', 'model_SET_R_h20.pt')
-    scaler_path = os.path.join(repo_root, 'models', 'phase2_3', 'scaler_SET_R_h20.joblib')
+    model_path = os.path.join(repo_root, 'models', 'production', 'model_SET_R_h20.pt')
+    scaler_path = os.path.join(repo_root, 'models', 'production', 'scaler_SET_R_h20.joblib')
     metrics_path = os.path.join(repo_root, 'results', 'phase2_3', 'champion_metrics.json')
     features_path = os.path.join(repo_root, 'results', 'phase2_3', 'feature_sets.json')
 
