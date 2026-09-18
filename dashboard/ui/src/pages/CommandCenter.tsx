@@ -332,26 +332,26 @@ export default function CommandCenter() {
           {/* Card 3: Model Attack Decision Output */}
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">MODEL PROBABILITY</CardTitle>
+              <CardTitle className="text-sm font-medium tracking-wider text-emerald-400">LIVE MODEL PREDICTION</CardTitle>
               <ShieldAlert className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              {isReady && latestPrediction ? (
+              {isReady && latestPrediction && latestPrediction.prediction_ready !== false && latestPrediction.attack_probability !== null && latestPrediction.attack_probability !== undefined ? (
                 <div className="mt-2 flex flex-col space-y-2">
                   <div className="text-3xl font-bold font-mono text-foreground">
                     {(latestPrediction.attack_probability * 100).toFixed(2)}%
                   </div>
                   <div className="flex justify-between items-center text-xs pt-1">
                     <span className="text-muted-foreground">Threshold</span>
-                    <span className="font-mono">{(latestPrediction.model_threshold * 100).toFixed(2)}%</span>
+                    <span className="font-mono">{((latestPrediction.model_threshold || threshold) * 100).toFixed(2)}%</span>
                   </div>
                   <div className="flex justify-between items-center text-xs">
                     <span className="text-muted-foreground">Continuous Risk</span>
-                    <span className="font-bold">{latestPrediction.risk.toUpperCase()}</span>
+                    <span className="font-bold">{(latestPrediction.risk_level || latestPrediction.risk || 'NOMINAL').toUpperCase()}</span>
                   </div>
                   <div className="mt-2 text-xs font-bold border-t border-border pt-2">
                     <div className="text-[10px] text-muted-foreground font-normal">MODEL DECISION</div>
-                    {latestPrediction.attack_probability >= latestPrediction.model_threshold 
+                    {latestPrediction.attack_probability >= (latestPrediction.model_threshold || threshold)
                       ? <span className="text-destructive font-mono">ATTACK THREAT DETECTED</span>
                       : <span className="text-emerald-500 font-mono">BELOW ATTACK THRESHOLD</span>}
                   </div>
@@ -359,7 +359,7 @@ export default function CommandCenter() {
               ) : (
                 <div className="mt-4 text-xs text-muted-foreground space-y-2">
                   <div className="font-semibold text-foreground">BUILDING TEMPORAL CONTEXT</div>
-                  <p>Model inference runs automatically once 20 genuine 10-second traffic windows are collected.</p>
+                  <p>{latestPrediction?.message || "Model inference runs automatically once 20 genuine 10-second traffic windows are collected."}</p>
                 </div>
               )}
             </CardContent>

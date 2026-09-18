@@ -222,12 +222,17 @@ def get_live_debug():
         "capture_details": live_engine.get_capture_status()
     }
 
+@app.get("/api/live/prediction")
+def get_live_prediction():
+    return live_engine.get_live_prediction()
+
+@app.get("/api/live/diagnostics")
+def get_live_diagnostics():
+    return live_engine.get_diagnostics()
+
 @app.get("/api/live/latest")
 def get_live_latest():
-    pred = live_engine.get_latest_prediction()
-    if pred:
-        return pred
-    return {"status": "Waiting for 20 window context"}
+    return live_engine.get_live_prediction()
 
 @app.post("/api/live/start")
 def start_live_capture(interface: Optional[str] = Query(None)):

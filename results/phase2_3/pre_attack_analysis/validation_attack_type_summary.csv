@@ -1,0 +1,2 @@
+attack_type,n_transitions,median_prob_T-300,median_prob_T-200,median_prob_T-100,median_prob_T-50,median_prob_T-20,median_prob_T-10,median_prob_T0,median_prob_T+10,median_prob_T+20,median_prob_T+50,median_prob_T+100,n_preattack_crossings,pct_preattack_crossing,median_lead_time
+Benign,1,0.9683635234832764,0.7440733313560486,0.4362787902355194,0.46216464042663574,0.3802116811275482,0.8397980332374573,0.6970261335372925,0.6471341252326965,0.8313542604446411,0.830550491809845,0.9645525217056274,0,0.0,

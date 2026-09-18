@@ -1,0 +1,12 @@
+{
+    "1_no_target_derived_features_in_X": true,
+    "2_no_future_windows_enter_prediction": true,
+    "3_scaler_is_frozen": true,
+    "4_model_weights_unchanged": true,
+    "5_final_test_not_used_for_threshold_selection": true,
+    "6_validation_used_for_operating_point": true,
+    "7_first_threshold_crossing_used": true,
+    "8_T0_crossing_not_counted_as_preattack": true,
+    "9_benign_false_alarm_checkpoints_have_no_attack": true,
+    "10_predictions_in_0_1": true
+}

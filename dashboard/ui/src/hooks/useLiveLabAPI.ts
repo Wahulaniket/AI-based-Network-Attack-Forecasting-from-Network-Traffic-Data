@@ -30,7 +30,7 @@ export interface CaptureStatus {
   interface: string;
   interface_description?: string;
   interface_index: number;
-  current_ipv4: str;
+  current_ipv4: string;
   capture_active: boolean;
   packets_captured: number;
   bytes_captured: number;
@@ -41,17 +41,27 @@ export interface CaptureStatus {
 }
 
 export interface LivePrediction {
+  prediction_ready?: boolean;
+  prediction_type?: string;
   timestamp: string;
-  window_start: string;
-  window_end: string;
+  window_start?: string;
+  window_end?: string;
   attack_probability: number;
   model_threshold: number;
-  prediction: number;
-  risk: string;
-  history_collected: number;
-  flow_count: number;
-  packet_count: number;
-  total_bytes: number;
+  binary_prediction?: number;
+  prediction?: number;
+  risk_level?: string;
+  risk?: string;
+  context_windows_available?: number;
+  context_windows_required?: number;
+  packets_seen?: number;
+  flows_seen?: number;
+  capture_status?: string;
+  message?: string;
+  history_collected?: number;
+  flow_count?: number;
+  packet_count?: number;
+  total_bytes?: number;
   status?: string;
 }
 
@@ -88,17 +98,19 @@ export function useLiveLabAPI() {
 
   const fetchLatest = useCallback(async () => {
     try {
-      const res = await fetch(`${API_BASE}/latest`);
+      const res = await fetch(`${API_BASE}/prediction`);
       if (res.ok) {
         const data = await res.json();
-        if (!data.status || data.timestamp) {
+        if (data.prediction_ready || data.timestamp) {
           setLatestPrediction(data);
-          setPredictionsHistory(prev => {
-            const exists = prev.find(p => p.timestamp === data.timestamp);
-            if (exists) return prev;
-            const newHistory = [...prev, data];
-            return newHistory.slice(-50);
-          });
+          if (data.prediction_ready && data.attack_probability !== null && data.attack_probability !== undefined) {
+            setPredictionsHistory(prev => {
+              const exists = prev.find(p => p.timestamp === data.timestamp);
+              if (exists) return prev;
+              const newHistory = [...prev, data];
+              return newHistory.slice(-50);
+            });
+          }
         }
       }
     } catch (err) {

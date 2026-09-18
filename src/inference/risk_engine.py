@@ -1,21 +1,21 @@
 from typing import Tuple
 
-def calculate_risk_level(probability: float) -> str:
-    """Deterministic risk classification around the model probability.
+def calculate_risk_level(probability: float, threshold: float = 0.9830410480499268) -> str:
+    """Deterministic risk classification around model probability and decision threshold.
     
-    This is a presentation-layer classification strictly mapped to ranges:
-    LOW       < 0.25
-    MEDIUM    0.25-0.50
-    HIGH      0.50-0.75
-    CRITICAL  >= 0.75
+    A probability below the model threshold must not be labeled HIGH or CRITICAL.
     
-    This is strictly decoupled from the model threshold (which is evaluated separately for the binary prediction).
+    Mapping relative to threshold:
+    LOW       < threshold * 0.5
+    MEDIUM    threshold * 0.5 <= prob < threshold
+    HIGH      threshold <= prob < threshold + (1.0 - threshold) * 0.5
+    CRITICAL  >= threshold + (1.0 - threshold) * 0.5
     """
-    if probability < 0.25:
+    if probability < threshold * 0.5:
         return "LOW"
-    elif probability < 0.50:
+    elif probability < threshold:
         return "MEDIUM"
-    elif probability < 0.75:
+    elif probability < threshold + (1.0 - threshold) * 0.5:
         return "HIGH"
     else:
         return "CRITICAL"

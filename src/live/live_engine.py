@@ -53,6 +53,7 @@ class LiveEngine:
         )
             
         # State
+        self.windows_processed = 0
         self.status = LiveStatus(
             interface=LIVE_INTERFACE_NAME,
             interface_index=LIVE_INTERFACE_INDEX,
@@ -75,7 +76,7 @@ class LiveEngine:
         self.last_window_time = time.time()
         
         # Concurrency and Scheduling
-        self.lock = threading.Lock()
+        self.lock = threading.RLock()
         self.scheduler_thread = None
         self.stop_event = threading.Event()
 
@@ -189,9 +190,90 @@ class LiveEngine:
         
     def get_latest_prediction(self) -> Optional[Dict[str, Any]]:
         """Returns latest prediction or waiting state for GET /api/live/latest."""
-        if self.latest_prediction:
-            return self.latest_prediction.to_dict()
-        return None
+        with self.lock:
+            if self.latest_prediction:
+                return self.latest_prediction.to_dict()
+            return None
+
+    def get_live_prediction(self) -> Dict[str, Any]:
+        """Returns dedicated live prediction dict for GET /api/live/prediction."""
+        with self.lock:
+            pkts = self.capturer.packets_captured + self.traffic_summary.packets_observed
+            flows = self.capturer.flows_created + self.traffic_summary.flows_observed
+            cap_active = self.status.capture_active and self.capturer.capture_active
+            cap_status = "ACTIVE" if cap_active else "INACTIVE"
+            avail = len(self.window_context)
+            req = FROZEN_HISTORY_WINDOWS
+
+            if avail >= req and self.latest_prediction is not None:
+                p = self.latest_prediction
+                return {
+                    "prediction_ready": True,
+                    "prediction_type": "LIVE_MODEL_PREDICTION",
+                    "timestamp": p.timestamp.isoformat() if p.timestamp else None,
+                    "window_start": p.window_start.isoformat() if p.window_start else None,
+                    "window_end": p.window_end.isoformat() if p.window_end else None,
+                    "attack_probability": p.attack_probability,
+                    "model_threshold": p.model_threshold,
+                    "binary_prediction": p.binary_prediction,
+                    "risk_level": p.risk_level,
+                    "context_windows_available": avail,
+                    "context_windows_required": req,
+                    "packets_seen": pkts,
+                    "flows_seen": flows,
+                    "capture_status": cap_status,
+                    "message": "Live model prediction active",
+                    # Compatibility aliases
+                    "prediction": p.binary_prediction,
+                    "risk": p.risk_level,
+                    "history_collected": avail,
+                    "flow_count": p.flow_count,
+                    "packet_count": p.packet_count,
+                    "total_bytes": p.total_bytes
+                }
+            else:
+                return {
+                    "prediction_ready": False,
+                    "prediction_type": "LIVE_MODEL_PREDICTION",
+                    "timestamp": datetime.now().isoformat(),
+                    "window_start": None,
+                    "window_end": None,
+                    "attack_probability": None,
+                    "model_threshold": self.threshold,
+                    "binary_prediction": None,
+                    "risk_level": "INSUFFICIENT_CONTEXT",
+                    "context_windows_available": avail,
+                    "context_windows_required": req,
+                    "packets_seen": pkts,
+                    "flows_seen": flows,
+                    "capture_status": cap_status,
+                    "message": f"Insufficient live context: {avail}/{req} 10-second windows available. More live context is required.",
+                    # Compatibility aliases
+                    "prediction": None,
+                    "risk": "INSUFFICIENT_CONTEXT",
+                    "history_collected": avail
+                }
+
+    def get_diagnostics(self) -> Dict[str, Any]:
+        """Returns diagnostic details for GET /api/live/diagnostics."""
+        with self.lock:
+            pkts = self.capturer.packets_captured + self.traffic_summary.packets_observed
+            flows = self.capturer.flows_created + self.traffic_summary.flows_observed
+            cap_running = self.status.capture_active and self.capturer.capture_active
+            latest_ts = self.latest_prediction.timestamp.isoformat() if self.latest_prediction and self.latest_prediction.timestamp else None
+            latest_prob = self.latest_prediction.attack_probability if self.latest_prediction else None
+
+            return {
+                "capture_running": cap_running,
+                "interface": self.status.interface or self.capturer.interface_name,
+                "packets_seen": pkts,
+                "flows_seen": flows,
+                "windows_processed": self.windows_processed,
+                "context_windows_available": len(self.window_context),
+                "latest_prediction_timestamp": latest_ts,
+                "latest_probability": latest_prob,
+                "model_threshold": self.threshold
+            }
 
     def ingest_flows(self, flows: List[Dict[str, Any]]):
         """Receives external flows (e.g. from API/tests)."""
@@ -272,6 +354,7 @@ class LiveEngine:
         history_before = len(self.window_context)
         self.window_context.append(feature_vector)
         self.window_stats_context.append(flow_cnt)
+        self.windows_processed += 1
         self.status.history_collected = len(self.window_context)
         
         print(f"\n[LIVE WINDOW {datetime.fromtimestamp(self.last_window_time).strftime('%H:%M:%S')}] flows={flow_cnt} history={history_before} -> {self.status.history_collected}/{FROZEN_HISTORY_WINDOWS}")
@@ -300,7 +383,7 @@ class LiveEngine:
             prob = float(torch.sigmoid(logits).item())
             
         is_attack = int(prob >= self.threshold)
-        risk = calculate_risk_level(prob)
+        risk = calculate_risk_level(prob, self.threshold)
         w_flows = self.window_stats_context[-1]
         
         ts = window_timestamp.to_pydatetime() if isinstance(window_timestamp, pd.Timestamp) else datetime.now()
