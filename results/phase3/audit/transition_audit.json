@@ -1,0 +1,135 @@
+{
+    "1_load_data": {
+        "S_t_rows": 28706,
+        "Y_t_rows": 28706,
+        "S_t_columns": 77,
+        "Y_t_columns": 1
+    },
+    "2_timestamp_check": {
+        "min_timestamp": "2018-02-14 01:00:00",
+        "max_timestamp": "2018-03-02 12:59:50",
+        "is_chronological": true,
+        "duplicate_timestamps": 0
+    },
+    "3_alignment": {
+        "row_counts_match": true,
+        "timestamps_match": true
+    },
+    "5_transition_construction": {
+        "total_states": 28706,
+        "total_valid_transitions": 28705,
+        "expected_transitions": 28705,
+        "discarded_transitions": 0
+    },
+    "6_temporal_gap_audit": {
+        "min_gap_seconds": 10.0,
+        "max_gap_seconds": 388810.0,
+        "median_gap_seconds": 10.0,
+        "mean_gap_seconds": 49.663473262497824,
+        "exactly_10s_transitions": 28318,
+        "greater_than_10s_transitions": 387,
+        "less_than_10s_transitions": 0
+    },
+    "8_chronological_split": {
+        "TRAIN": {
+            "transitions": 22964,
+            "states": 22965,
+            "start": "2018-02-14 01:00:00",
+            "end": "2018-03-01 03:14:40"
+        },
+        "VALIDATION": {
+            "transitions": 2870,
+            "states": 2871,
+            "start": "2018-03-01 03:14:40",
+            "end": "2018-03-02 01:45:10"
+        },
+        "TEST": {
+            "transitions": 2871,
+            "states": 2872,
+            "start": "2018-03-02 01:45:10",
+            "end": "2018-03-02 12:59:50"
+        }
+    },
+    "10_attack_label_audit": {
+        "TRAIN": {
+            "total_states": 22964,
+            "attack_states": 4146,
+            "benign_states": 18818,
+            "attack_percentage": 18.054345932764328
+        },
+        "VALIDATION": {
+            "total_states": 2870,
+            "attack_states": 753,
+            "benign_states": 2117,
+            "attack_percentage": 26.236933797909405
+        },
+        "TEST": {
+            "total_states": 2871,
+            "attack_states": 1773,
+            "benign_states": 1098,
+            "attack_percentage": 61.75548589341693
+        }
+    },
+    "12_manual_examples": [
+        {
+            "input_timestamp": "2018-02-14 01:00:00",
+            "target_timestamp": "2018-02-14 01:00:10",
+            "time_delta_seconds": 10.0,
+            "input_S_t_flow_count": 131.0,
+            "target_S_t_flow_count": 548.0,
+            "input_Y_t_label": 0,
+            "target_Y_t_label": 0
+        },
+        {
+            "input_timestamp": "2018-02-15 10:22:50",
+            "target_timestamp": "2018-02-15 10:23:00",
+            "time_delta_seconds": 10.0,
+            "input_S_t_flow_count": 201.0,
+            "target_S_t_flow_count": 361.0,
+            "input_Y_t_label": 0,
+            "target_Y_t_label": 0
+        },
+        {
+            "input_timestamp": "2018-02-20 12:59:00",
+            "target_timestamp": "2018-02-20 12:59:10",
+            "time_delta_seconds": 10.0,
+            "input_S_t_flow_count": 2402.0,
+            "target_S_t_flow_count": 2106.0,
+            "input_Y_t_label": 0,
+            "target_Y_t_label": 0
+        },
+        {
+            "input_timestamp": "2018-02-23 08:45:30",
+            "target_timestamp": "2018-02-23 08:45:40",
+            "time_delta_seconds": 10.0,
+            "input_S_t_flow_count": 286.0,
+            "target_S_t_flow_count": 395.0,
+            "input_Y_t_label": 0,
+            "target_Y_t_label": 0
+        },
+        {
+            "input_timestamp": "2018-03-01 03:14:40",
+            "target_timestamp": "2018-03-01 03:14:50",
+            "time_delta_seconds": 10.0,
+            "input_S_t_flow_count": 57.0,
+            "target_S_t_flow_count": 66.0,
+            "input_Y_t_label": 1,
+            "target_Y_t_label": 1
+        }
+    ],
+    "passes": {
+        "timestamp_ordering": true,
+        "duplicate_timestamps": true,
+        "row_alignment": true,
+        "77_feature_schema": true,
+        "numeric_integrity": true,
+        "no_nan_inf": true,
+        "target_isolation": true,
+        "transition_construction": true,
+        "causality": true,
+        "split_boundary_integrity": true,
+        "label_separation": true,
+        "world_model_shape": true
+    },
+    "final_verdict": "PHASE 3.1 TRANSITION AUDIT: PASS"
+}

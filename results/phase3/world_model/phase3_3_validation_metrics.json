@@ -1,0 +1,463 @@
+{
+    "Primary": {
+        "K=1": {
+            "Eligible_Starts": 2841,
+            "Nominal_Seconds": 10,
+            "LSTM_Global": {
+                "MAE": 1846032.537516599,
+                "RMSE": 7567915.85135386,
+                "NRMSE": 0.06306596542794883
+            },
+            "Persistence_Global": {
+                "MAE": 1225737.4162285577,
+                "RMSE": 6545229.832514464,
+                "NRMSE": 0.054543581937620524
+            },
+            "Physical_Validity": {
+                "Negative_Primitives": 0,
+                "Negative_Reconstructed": 0,
+                "Consistency_Violations": 0
+            },
+            "Feature_Metrics": [
+                {
+                    "feature": "flow_count",
+                    "LSTM_RMSE": 164.71760678694577,
+                    "Persistence_RMSE": 220.18625359553963
+                },
+                {
+                    "feature": "Tot Fwd Pkts",
+                    "LSTM_RMSE": 8.250893122485524,
+                    "Persistence_RMSE": 10.227234874657476
+                },
+                {
+                    "feature": "Tot Bwd Pkts",
+                    "LSTM_RMSE": 17.274686805674815,
+                    "Persistence_RMSE": 19.738846165195636
+                },
+                {
+                    "feature": "Flow Byts/s",
+                    "LSTM_RMSE": 2216.750680790579,
+                    "Persistence_RMSE": 2391.2047502299756
+                },
+                {
+                    "feature": "Flow Pkts/s",
+                    "LSTM_RMSE": 2.490818796943263,
+                    "Persistence_RMSE": 2.893432773624386
+                },
+                {
+                    "feature": "SYN Flag Cnt",
+                    "LSTM_RMSE": 5.756354059077197,
+                    "Persistence_RMSE": 9.057153580182286
+                },
+                {
+                    "feature": "RST Flag Cnt",
+                    "LSTM_RMSE": 21.40503070691055,
+                    "Persistence_RMSE": 25.02891675055957
+                },
+                {
+                    "feature": "Flow IAT Mean",
+                    "LSTM_RMSE": 4111831.149665481,
+                    "Persistence_RMSE": 3743920.5947029768
+                },
+                {
+                    "feature": "Down/Up Ratio",
+                    "LSTM_RMSE": 0.292911177256489,
+                    "Persistence_RMSE": 0.39560000217619273
+                }
+            ]
+        },
+        "K=3": {
+            "Eligible_Starts": 2821,
+            "Nominal_Seconds": 30,
+            "LSTM_Global": {
+                "MAE": 1883385.4683468114,
+                "RMSE": 7606355.983122357,
+                "NRMSE": 0.06338629985935297
+            },
+            "Persistence_Global": {
+                "MAE": 1298417.6729669692,
+                "RMSE": 6750301.05686237,
+                "NRMSE": 0.05625250880718641
+            },
+            "Physical_Validity": {
+                "Negative_Primitives": 0,
+                "Negative_Reconstructed": 0,
+                "Consistency_Violations": 0
+            },
+            "Feature_Metrics": [
+                {
+                    "feature": "flow_count",
+                    "LSTM_RMSE": 169.74008051970557,
+                    "Persistence_RMSE": 235.4873975980625
+                },
+                {
+                    "feature": "Tot Fwd Pkts",
+                    "LSTM_RMSE": 8.283925460049419,
+                    "Persistence_RMSE": 11.437050800568247
+                },
+                {
+                    "feature": "Tot Bwd Pkts",
+                    "LSTM_RMSE": 17.387407664961863,
+                    "Persistence_RMSE": 23.74717303408066
+                },
+                {
+                    "feature": "Flow Byts/s",
+                    "LSTM_RMSE": 2228.880544248836,
+                    "Persistence_RMSE": 3058.40203266141
+                },
+                {
+                    "feature": "Flow Pkts/s",
+                    "LSTM_RMSE": 2.5072921784038047,
+                    "Persistence_RMSE": 3.4293423078548773
+                },
+                {
+                    "feature": "SYN Flag Cnt",
+                    "LSTM_RMSE": 5.780639771771661,
+                    "Persistence_RMSE": 10.134543327200488
+                },
+                {
+                    "feature": "RST Flag Cnt",
+                    "LSTM_RMSE": 23.417711560851718,
+                    "Persistence_RMSE": 27.8366825124735
+                },
+                {
+                    "feature": "Flow IAT Mean",
+                    "LSTM_RMSE": 4340562.606659444,
+                    "Persistence_RMSE": 4102396.0673106587
+                },
+                {
+                    "feature": "Down/Up Ratio",
+                    "LSTM_RMSE": 0.29716688494629245,
+                    "Persistence_RMSE": 0.40914875709689275
+                }
+            ]
+        },
+        "K=5": {
+            "Eligible_Starts": 2804,
+            "Nominal_Seconds": 50,
+            "LSTM_Global": {
+                "MAE": 1965721.6943360653,
+                "RMSE": 7895327.578477216,
+                "NRMSE": 0.06579439648731013
+            },
+            "Persistence_Global": {
+                "MAE": 1310070.5180491884,
+                "RMSE": 6834560.070738384,
+                "NRMSE": 0.05695466725615319
+            },
+            "Physical_Validity": {
+                "Negative_Primitives": 0,
+                "Negative_Reconstructed": 0,
+                "Consistency_Violations": 0
+            },
+            "Feature_Metrics": [
+                {
+                    "feature": "flow_count",
+                    "LSTM_RMSE": 167.4523441750406,
+                    "Persistence_RMSE": 234.4843114085012
+                },
+                {
+                    "feature": "Tot Fwd Pkts",
+                    "LSTM_RMSE": 8.189151149321015,
+                    "Persistence_RMSE": 11.512965433139426
+                },
+                {
+                    "feature": "Tot Bwd Pkts",
+                    "LSTM_RMSE": 17.018014387804715,
+                    "Persistence_RMSE": 23.942803059168018
+                },
+                {
+                    "feature": "Flow Byts/s",
+                    "LSTM_RMSE": 2237.2627567920076,
+                    "Persistence_RMSE": 3138.5431378715152
+                },
+                {
+                    "feature": "Flow Pkts/s",
+                    "LSTM_RMSE": 2.459947584991832,
+                    "Persistence_RMSE": 3.456191541905477
+                },
+                {
+                    "feature": "SYN Flag Cnt",
+                    "LSTM_RMSE": 5.779238832941964,
+                    "Persistence_RMSE": 9.846322731186307
+                },
+                {
+                    "feature": "RST Flag Cnt",
+                    "LSTM_RMSE": 23.60445942991507,
+                    "Persistence_RMSE": 27.13513627277524
+                },
+                {
+                    "feature": "Flow IAT Mean",
+                    "LSTM_RMSE": 4407715.835893537,
+                    "Persistence_RMSE": 3988373.1364538334
+                },
+                {
+                    "feature": "Down/Up Ratio",
+                    "LSTM_RMSE": 0.29645042810126726,
+                    "Persistence_RMSE": 0.4066299816196187
+                }
+            ]
+        },
+        "K=10": {
+            "Eligible_Starts": 2773,
+            "Nominal_Seconds": 100,
+            "LSTM_Global": {
+                "MAE": 2015788.0956717408,
+                "RMSE": 8066238.057919385,
+                "NRMSE": 0.06721865048266153
+            },
+            "Persistence_Global": {
+                "MAE": 1326722.0599862,
+                "RMSE": 6860136.095364934,
+                "NRMSE": 0.05716780079470778
+            },
+            "Physical_Validity": {
+                "Negative_Primitives": 0,
+                "Negative_Reconstructed": 0,
+                "Consistency_Violations": 0
+            },
+            "Feature_Metrics": [
+                {
+                    "feature": "flow_count",
+                    "LSTM_RMSE": 170.24353671746243,
+                    "Persistence_RMSE": 235.78114106932387
+                },
+                {
+                    "feature": "Tot Fwd Pkts",
+                    "LSTM_RMSE": 8.199845886527694,
+                    "Persistence_RMSE": 11.612249454823958
+                },
+                {
+                    "feature": "Tot Bwd Pkts",
+                    "LSTM_RMSE": 17.09825405136952,
+                    "Persistence_RMSE": 24.192708541079718
+                },
+                {
+                    "feature": "Flow Byts/s",
+                    "LSTM_RMSE": 2247.79008513013,
+                    "Persistence_RMSE": 3174.4878238117676
+                },
+                {
+                    "feature": "Flow Pkts/s",
+                    "LSTM_RMSE": 2.4718569273977224,
+                    "Persistence_RMSE": 3.494126151753958
+                },
+                {
+                    "feature": "SYN Flag Cnt",
+                    "LSTM_RMSE": 5.9049266287630555,
+                    "Persistence_RMSE": 10.026668370661223
+                },
+                {
+                    "feature": "RST Flag Cnt",
+                    "LSTM_RMSE": 25.083483787297755,
+                    "Persistence_RMSE": 27.94977077294853
+                },
+                {
+                    "feature": "Flow IAT Mean",
+                    "LSTM_RMSE": 4518130.513888096,
+                    "Persistence_RMSE": 4100566.332061072
+                },
+                {
+                    "feature": "Down/Up Ratio",
+                    "LSTM_RMSE": 0.27029124554844197,
+                    "Persistence_RMSE": 0.3923228478801383
+                }
+            ]
+        },
+        "K=20": {
+            "Eligible_Starts": 2730,
+            "Nominal_Seconds": 200,
+            "LSTM_Global": {
+                "MAE": 2087657.0263432732,
+                "RMSE": 8216971.19482965,
+                "NRMSE": 0.06847475995691374
+            },
+            "Persistence_Global": {
+                "MAE": 1359037.0391832772,
+                "RMSE": 6992603.455667791,
+                "NRMSE": 0.05827169546389825
+            },
+            "Physical_Validity": {
+                "Negative_Primitives": 0,
+                "Negative_Reconstructed": 0,
+                "Consistency_Violations": 0
+            },
+            "Feature_Metrics": [
+                {
+                    "feature": "flow_count",
+                    "LSTM_RMSE": 173.62902100690275,
+                    "Persistence_RMSE": 235.51934274250345
+                },
+                {
+                    "feature": "Tot Fwd Pkts",
+                    "LSTM_RMSE": 8.27102725365411,
+                    "Persistence_RMSE": 11.596467736562099
+                },
+                {
+                    "feature": "Tot Bwd Pkts",
+                    "LSTM_RMSE": 17.23416164890467,
+                    "Persistence_RMSE": 24.296242235185648
+                },
+                {
+                    "feature": "Flow Byts/s",
+                    "LSTM_RMSE": 2265.0465357319517,
+                    "Persistence_RMSE": 3194.217708140664
+                },
+                {
+                    "feature": "Flow Pkts/s",
+                    "LSTM_RMSE": 2.492416528954415,
+                    "Persistence_RMSE": 3.504055597463373
+                },
+                {
+                    "feature": "SYN Flag Cnt",
+                    "LSTM_RMSE": 7.71742422109295,
+                    "Persistence_RMSE": 9.953131927430439
+                },
+                {
+                    "feature": "RST Flag Cnt",
+                    "LSTM_RMSE": 26.798262953677465,
+                    "Persistence_RMSE": 27.065420675411577
+                },
+                {
+                    "feature": "Flow IAT Mean",
+                    "LSTM_RMSE": 4815234.231404894,
+                    "Persistence_RMSE": 4197565.516435115
+                },
+                {
+                    "feature": "Down/Up Ratio",
+                    "LSTM_RMSE": 0.28034097865676144,
+                    "Persistence_RMSE": 0.3905781234453086
+                }
+            ]
+        },
+        "K=30": {
+            "Eligible_Starts": 2700,
+            "Nominal_Seconds": 300,
+            "LSTM_Global": {
+                "MAE": 2118635.3956586057,
+                "RMSE": 8264799.810570118,
+                "NRMSE": 0.06887333175475098
+            },
+            "Persistence_Global": {
+                "MAE": 1372465.5737532754,
+                "RMSE": 7068413.675539352,
+                "NRMSE": 0.05890344729616126
+            },
+            "Physical_Validity": {
+                "Negative_Primitives": 0,
+                "Negative_Reconstructed": 0,
+                "Consistency_Violations": 0
+            },
+            "Feature_Metrics": [
+                {
+                    "feature": "flow_count",
+                    "LSTM_RMSE": 177.25442467630262,
+                    "Persistence_RMSE": 237.34424912475254
+                },
+                {
+                    "feature": "Tot Fwd Pkts",
+                    "LSTM_RMSE": 8.304996575185868,
+                    "Persistence_RMSE": 11.565953063728479
+                },
+                {
+                    "feature": "Tot Bwd Pkts",
+                    "LSTM_RMSE": 17.307218081555934,
+                    "Persistence_RMSE": 23.887014717113214
+                },
+                {
+                    "feature": "Flow Byts/s",
+                    "LSTM_RMSE": 2274.3763017066394,
+                    "Persistence_RMSE": 3215.474191683381
+                },
+                {
+                    "feature": "Flow Pkts/s",
+                    "LSTM_RMSE": 2.5039548933910685,
+                    "Persistence_RMSE": 3.460083203698971
+                },
+                {
+                    "feature": "SYN Flag Cnt",
+                    "LSTM_RMSE": 7.583426128465658,
+                    "Persistence_RMSE": 9.94628164283108
+                },
+                {
+                    "feature": "RST Flag Cnt",
+                    "LSTM_RMSE": 28.188626633421315,
+                    "Persistence_RMSE": 27.457623915974796
+                },
+                {
+                    "feature": "Flow IAT Mean",
+                    "LSTM_RMSE": 4857575.8805849105,
+                    "Persistence_RMSE": 4116234.0918207373
+                },
+                {
+                    "feature": "Down/Up Ratio",
+                    "LSTM_RMSE": 0.24186079131997418,
+                    "Persistence_RMSE": 0.3664278286000865
+                }
+            ]
+        }
+    },
+    "Secondary": {},
+    "Error_Growth": [
+        {
+            "Horizon_K": 1,
+            "Nominal_Seconds": 10,
+            "Eligible_Starts": 2841,
+            "Median_Elapsed": 10.0,
+            "LSTM_RMSE": 7567915.85135386,
+            "Persistence_RMSE": 6545229.832514464,
+            "LSTM_NRMSE": 0.06306596542794883,
+            "Persistence_NRMSE": 0.054543581937620524
+        },
+        {
+            "Horizon_K": 3,
+            "Nominal_Seconds": 30,
+            "Eligible_Starts": 2821,
+            "Median_Elapsed": 30.0,
+            "LSTM_RMSE": 7606355.983122357,
+            "Persistence_RMSE": 6750301.05686237,
+            "LSTM_NRMSE": 0.06338629985935297,
+            "Persistence_NRMSE": 0.05625250880718641
+        },
+        {
+            "Horizon_K": 5,
+            "Nominal_Seconds": 50,
+            "Eligible_Starts": 2804,
+            "Median_Elapsed": 50.0,
+            "LSTM_RMSE": 7895327.578477216,
+            "Persistence_RMSE": 6834560.070738384,
+            "LSTM_NRMSE": 0.06579439648731013,
+            "Persistence_NRMSE": 0.05695466725615319
+        },
+        {
+            "Horizon_K": 10,
+            "Nominal_Seconds": 100,
+            "Eligible_Starts": 2773,
+            "Median_Elapsed": 100.0,
+            "LSTM_RMSE": 8066238.057919385,
+            "Persistence_RMSE": 6860136.095364934,
+            "LSTM_NRMSE": 0.06721865048266153,
+            "Persistence_NRMSE": 0.05716780079470778
+        },
+        {
+            "Horizon_K": 20,
+            "Nominal_Seconds": 200,
+            "Eligible_Starts": 2730,
+            "Median_Elapsed": 200.0,
+            "LSTM_RMSE": 8216971.19482965,
+            "Persistence_RMSE": 6992603.455667791,
+            "LSTM_NRMSE": 0.06847475995691374,
+            "Persistence_NRMSE": 0.05827169546389825
+        },
+        {
+            "Horizon_K": 30,
+            "Nominal_Seconds": 300,
+            "Eligible_Starts": 2700,
+            "Median_Elapsed": 300.0,
+            "LSTM_RMSE": 8264799.810570118,
+            "Persistence_RMSE": 7068413.675539352,
+            "LSTM_NRMSE": 0.06887333175475098,
+            "Persistence_NRMSE": 0.05890344729616126
+        }
+    ]
+}

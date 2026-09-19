@@ -1,0 +1,92 @@
+{
+    "Flow Pkts/s": {
+        "MAE": 0.0,
+        "Max_Error": 0.0,
+        "Exact_Match_Pct": 100.0,
+        "Validated": true
+    },
+    "Fwd Pkts/s": {
+        "MAE": 0.0,
+        "Max_Error": 0.0,
+        "Exact_Match_Pct": 100.0,
+        "Validated": true
+    },
+    "Bwd Pkts/s": {
+        "MAE": 0.0,
+        "Max_Error": 0.0,
+        "Exact_Match_Pct": 100.0,
+        "Validated": true
+    },
+    "Flow Byts/s": {
+        "MAE": 0.0,
+        "Max_Error": 0.0,
+        "Exact_Match_Pct": 100.0,
+        "Validated": true
+    },
+    "Fwd Pkt Len Mean": {
+        "MAE": 0.0,
+        "Max_Error": 0.0,
+        "Exact_Match_Pct": 100.0,
+        "Validated": true
+    },
+    "Bwd Pkt Len Mean": {
+        "MAE": 0.0,
+        "Max_Error": 0.0,
+        "Exact_Match_Pct": 100.0,
+        "Validated": true
+    },
+    "Pkt Len Mean": {
+        "MAE": 0.0,
+        "Max_Error": 0.0,
+        "Exact_Match_Pct": 100.0,
+        "Validated": true
+    },
+    "Down/Up Ratio": {
+        "MAE": 0.0,
+        "Max_Error": 0.0,
+        "Exact_Match_Pct": 100.0,
+        "Validated": true
+    },
+    "Fwd Seg Size Avg": {
+        "MAE": 27.668372772563895,
+        "Max_Error": 5137.181303206931,
+        "Exact_Match_Pct": 3.2780603358182963,
+        "Validated": false
+    },
+    "Bwd Seg Size Avg": {
+        "MAE": 253.79579441849947,
+        "Max_Error": 3794.9790653447812,
+        "Exact_Match_Pct": 3.574165679648854,
+        "Validated": false
+    },
+    "Pkt Size Avg": {
+        "MAE": 0.0,
+        "Max_Error": 0.0,
+        "Exact_Match_Pct": 100.0,
+        "Validated": true
+    },
+    "Subflow Fwd Pkts": {
+        "MAE": 0.0,
+        "Max_Error": 0.0,
+        "Exact_Match_Pct": 100.0,
+        "Validated": true
+    },
+    "Subflow Fwd Byts": {
+        "MAE": 0.0,
+        "Max_Error": 0.0,
+        "Exact_Match_Pct": 100.0,
+        "Validated": true
+    },
+    "Subflow Bwd Pkts": {
+        "MAE": 0.0,
+        "Max_Error": 0.0,
+        "Exact_Match_Pct": 100.0,
+        "Validated": true
+    },
+    "Subflow Bwd Byts": {
+        "MAE": 0.18601643906938084,
+        "Max_Error": 666.6875,
+        "Exact_Match_Pct": 99.85717271650526,
+        "Validated": false
+    }
+}

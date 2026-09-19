@@ -1,0 +1,653 @@
+{
+    "Flow Duration": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Tot Fwd Pkts": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Tot Bwd Pkts": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "TotLen Fwd Pkts": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "TotLen Bwd Pkts": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Fwd Pkt Len Max": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Fwd Pkt Len Min": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Fwd Pkt Len Mean": {
+        "category": "DETERMINISTICALLY DERIVED",
+        "components": [
+            "TotLen Fwd Pkts",
+            "Tot Fwd Pkts"
+        ],
+        "formula": "TotLen Fwd Pkts / Tot Fwd Pkts",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "0.0 sentinel",
+        "predicted_directly": false
+    },
+    "Fwd Pkt Len Std": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Bwd Pkt Len Max": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Bwd Pkt Len Min": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Bwd Pkt Len Mean": {
+        "category": "DETERMINISTICALLY DERIVED",
+        "components": [
+            "TotLen Bwd Pkts",
+            "Tot Bwd Pkts"
+        ],
+        "formula": "TotLen Bwd Pkts / Tot Bwd Pkts",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "0.0 sentinel",
+        "predicted_directly": false
+    },
+    "Bwd Pkt Len Std": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Flow Byts/s": {
+        "category": "DETERMINISTICALLY DERIVED",
+        "components": [
+            "TotLen Fwd Pkts",
+            "TotLen Bwd Pkts"
+        ],
+        "formula": "(TotLen Fwd Pkts + TotLen Bwd Pkts) / 10.0",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "0.0 sentinel",
+        "predicted_directly": false
+    },
+    "Flow Pkts/s": {
+        "category": "DETERMINISTICALLY DERIVED",
+        "components": [
+            "Tot Fwd Pkts",
+            "Tot Bwd Pkts"
+        ],
+        "formula": "(Tot Fwd Pkts + Tot Bwd Pkts) / 10.0",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "0.0 sentinel",
+        "predicted_directly": false
+    },
+    "Flow IAT Mean": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Flow IAT Std": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Flow IAT Max": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Flow IAT Min": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Fwd IAT Tot": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Fwd IAT Mean": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Fwd IAT Std": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Fwd IAT Max": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Fwd IAT Min": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Bwd IAT Tot": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Bwd IAT Mean": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Bwd IAT Std": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Bwd IAT Max": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Bwd IAT Min": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Fwd PSH Flags": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Bwd PSH Flags": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Fwd URG Flags": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Bwd URG Flags": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Fwd Header Len": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Bwd Header Len": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Fwd Pkts/s": {
+        "category": "DETERMINISTICALLY DERIVED",
+        "components": [
+            "Tot Fwd Pkts"
+        ],
+        "formula": "Tot Fwd Pkts / 10.0",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "0.0 sentinel",
+        "predicted_directly": false
+    },
+    "Bwd Pkts/s": {
+        "category": "DETERMINISTICALLY DERIVED",
+        "components": [
+            "Tot Bwd Pkts"
+        ],
+        "formula": "Tot Bwd Pkts / 10.0",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "0.0 sentinel",
+        "predicted_directly": false
+    },
+    "Pkt Len Min": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Pkt Len Max": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Pkt Len Mean": {
+        "category": "DETERMINISTICALLY DERIVED",
+        "components": [
+            "TotLen Fwd Pkts",
+            "TotLen Bwd Pkts",
+            "Tot Fwd Pkts",
+            "Tot Bwd Pkts"
+        ],
+        "formula": "(TotLen Fwd Pkts + TotLen Bwd Pkts) / (Tot Fwd Pkts + Tot Bwd Pkts)",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "0.0 sentinel",
+        "predicted_directly": false
+    },
+    "Pkt Len Std": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Pkt Len Var": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "FIN Flag Cnt": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "SYN Flag Cnt": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "RST Flag Cnt": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "PSH Flag Cnt": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "ACK Flag Cnt": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "URG Flag Cnt": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "CWE Flag Count": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "ECE Flag Cnt": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Down/Up Ratio": {
+        "category": "DETERMINISTICALLY DERIVED",
+        "components": [
+            "Tot Bwd Pkts",
+            "Tot Fwd Pkts"
+        ],
+        "formula": "Tot Bwd Pkts / Tot Fwd Pkts",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "0.0 sentinel",
+        "predicted_directly": false
+    },
+    "Pkt Size Avg": {
+        "category": "DETERMINISTICALLY DERIVED",
+        "components": [
+            "TotLen Fwd Pkts",
+            "TotLen Bwd Pkts",
+            "Tot Fwd Pkts",
+            "Tot Bwd Pkts"
+        ],
+        "formula": "(TotLen Fwd Pkts + TotLen Bwd Pkts) / (Tot Fwd Pkts + Tot Bwd Pkts)",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "0.0 sentinel",
+        "predicted_directly": false
+    },
+    "Fwd Seg Size Avg": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Bwd Seg Size Avg": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Fwd Byts/b Avg": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Fwd Pkts/b Avg": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Fwd Blk Rate Avg": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Bwd Byts/b Avg": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Bwd Pkts/b Avg": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Bwd Blk Rate Avg": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Subflow Fwd Pkts": {
+        "category": "DETERMINISTICALLY DERIVED",
+        "components": [
+            "Tot Fwd Pkts"
+        ],
+        "formula": "Tot Fwd Pkts",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "0.0 sentinel",
+        "predicted_directly": false
+    },
+    "Subflow Fwd Byts": {
+        "category": "DETERMINISTICALLY DERIVED",
+        "components": [
+            "TotLen Fwd Pkts"
+        ],
+        "formula": "TotLen Fwd Pkts",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "0.0 sentinel",
+        "predicted_directly": false
+    },
+    "Subflow Bwd Pkts": {
+        "category": "DETERMINISTICALLY DERIVED",
+        "components": [
+            "Tot Bwd Pkts"
+        ],
+        "formula": "Tot Bwd Pkts",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "0.0 sentinel",
+        "predicted_directly": false
+    },
+    "Subflow Bwd Byts": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Init Fwd Win Byts": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Init Bwd Win Byts": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Fwd Act Data Pkts": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Fwd Seg Size Min": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Active Mean": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Active Std": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Active Max": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Active Min": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Idle Mean": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Idle Std": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Idle Max": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "Idle Min": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    },
+    "flow_count": {
+        "category": "PRIMITIVE / FLOW-LEVEL DESCRIPTIVE",
+        "components": [],
+        "formula": "",
+        "non_negativity_constraint": true,
+        "zero_denominator_policy": "N/A",
+        "predicted_directly": true
+    }
+}

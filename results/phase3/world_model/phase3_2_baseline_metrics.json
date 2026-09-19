@@ -1,0 +1,803 @@
+{
+    "LSTM_Normalized": {
+        "MAE": 0.2028253823518753,
+        "RMSE": 0.5150876279463764,
+        "NRMSE": 0.011634089814520668
+    },
+    "LSTM_Original": {
+        "MAE": 1186525.875,
+        "RMSE": 5646007.099597379,
+        "NRMSE": 0.04705005916331148
+    },
+    "Persistence_Original": {
+        "MAE": 1314412.625,
+        "RMSE": 6853064.898097493,
+        "NRMSE": 0.057108874150812436
+    },
+    "Per_Feature": [
+        {
+            "feature": "Flow Duration",
+            "LSTM_MAE": 5047765.5,
+            "LSTM_RMSE": 6519385.246542192,
+            "Persistence_MAE": 6167717.0,
+            "Persistence_RMSE": 8314305.9348628735,
+            "LSTM_Pearson": 0.591801234972857,
+            "LSTM_Spearman": 0.605769782907326
+        },
+        {
+            "feature": "Tot Fwd Pkts",
+            "LSTM_MAE": 194.9186248779297,
+            "LSTM_RMSE": 236.65393708430037,
+            "Persistence_MAE": 2.2297592163085938,
+            "Persistence_RMSE": 13.139223947121732,
+            "LSTM_Pearson": 0.024197736852354608,
+            "LSTM_Spearman": 0.06729821439824053
+        },
+        {
+            "feature": "Tot Bwd Pkts",
+            "LSTM_MAE": 3.5416438579559326,
+            "LSTM_RMSE": 23.835139848584117,
+            "Persistence_MAE": 4.853052616119385,
+            "Persistence_RMSE": 32.89629738794227,
+            "LSTM_Pearson": 0.23190729961848572,
+            "LSTM_Spearman": 0.17815078656872685
+        },
+        {
+            "feature": "TotLen Fwd Pkts",
+            "LSTM_MAE": 6778.26025390625,
+            "LSTM_RMSE": 8419.854630574093,
+            "Persistence_MAE": 138.2628631591797,
+            "Persistence_RMSE": 204.58460199878192,
+            "LSTM_Pearson": 0.030126255411759326,
+            "LSTM_Spearman": 0.02165020558677895
+        },
+        {
+            "feature": "TotLen Bwd Pkts",
+            "LSTM_MAE": 4938.99169921875,
+            "LSTM_RMSE": 33804.031948866694,
+            "Persistence_MAE": 6108.22705078125,
+            "Persistence_RMSE": 46770.28800424474,
+            "LSTM_Pearson": 0.2424009686125863,
+            "LSTM_Spearman": 0.27224175485080626
+        },
+        {
+            "feature": "Fwd Pkt Len Max",
+            "LSTM_MAE": 234.35018920898438,
+            "LSTM_RMSE": 273.5947333648804,
+            "Persistence_MAE": 239.166259765625,
+            "Persistence_RMSE": 323.0686604655425,
+            "LSTM_Pearson": 0.2897698368130983,
+            "LSTM_Spearman": 0.2951271417554669
+        },
+        {
+            "feature": "Fwd Pkt Len Min",
+            "LSTM_MAE": 0.3611887991428375,
+            "LSTM_RMSE": 0.469199569010313,
+            "Persistence_MAE": 0.0,
+            "Persistence_RMSE": 0.0,
+            "LSTM_Pearson": 0.0,
+            "LSTM_Spearman": 0.0
+        },
+        {
+            "feature": "Fwd Pkt Len Mean",
+            "LSTM_MAE": 12.446392059326172,
+            "LSTM_RMSE": 17.43294999021474,
+            "Persistence_MAE": 16.230974197387695,
+            "Persistence_RMSE": 22.836720607509932,
+            "LSTM_Pearson": 0.2543568699177873,
+            "LSTM_Spearman": 0.25657155650197494
+        },
+        {
+            "feature": "Fwd Pkt Len Std",
+            "LSTM_MAE": 16.243850708007812,
+            "LSTM_RMSE": 21.645691250385866,
+            "Persistence_MAE": 21.02639389038086,
+            "Persistence_RMSE": 28.043376566281765,
+            "LSTM_Pearson": 0.3575145695720793,
+            "LSTM_Spearman": 0.36980160178527616
+        },
+        {
+            "feature": "Bwd Pkt Len Max",
+            "LSTM_MAE": 82.13772583007812,
+            "LSTM_RMSE": 119.44385285302462,
+            "Persistence_MAE": 83.08102416992188,
+            "Persistence_RMSE": 150.59912251777897,
+            "LSTM_Pearson": 0.2099706764339201,
+            "LSTM_Spearman": 0.22792541784438355
+        },
+        {
+            "feature": "Bwd Pkt Len Min",
+            "LSTM_MAE": 0.049369703978300095,
+            "LSTM_RMSE": 0.06203530456278309,
+            "Persistence_MAE": 0.0,
+            "Persistence_RMSE": 0.0,
+            "LSTM_Pearson": 0.0,
+            "LSTM_Spearman": 0.0
+        },
+        {
+            "feature": "Bwd Pkt Len Mean",
+            "LSTM_MAE": 189.48483276367188,
+            "LSTM_RMSE": 265.2329165092448,
+            "Persistence_MAE": 210.97117614746094,
+            "Persistence_RMSE": 355.26352454903105,
+            "LSTM_Pearson": 0.31610268342256687,
+            "LSTM_Spearman": 0.30134306386249443
+        },
+        {
+            "feature": "Bwd Pkt Len Std",
+            "LSTM_MAE": 32.8823127746582,
+            "LSTM_RMSE": 42.33491316923745,
+            "Persistence_MAE": 39.49307632446289,
+            "Persistence_RMSE": 53.26908310496577,
+            "LSTM_Pearson": 0.34077844774059884,
+            "LSTM_Spearman": 0.35970579535027286
+        },
+        {
+            "feature": "Flow Byts/s",
+            "LSTM_MAE": 733.54931640625,
+            "LSTM_RMSE": 3422.12565520321,
+            "Persistence_MAE": 618.5984497070312,
+            "Persistence_RMSE": 4680.972975781851,
+            "LSTM_Pearson": 0.17205880850570915,
+            "LSTM_Spearman": 0.10252609457125468
+        },
+        {
+            "feature": "Flow Pkts/s",
+            "LSTM_MAE": 22.40943717956543,
+            "LSTM_RMSE": 26.7549108828203,
+            "Persistence_MAE": 0.6990593671798706,
+            "Persistence_RMSE": 4.460210149629434,
+            "LSTM_Pearson": 0.05416179490602648,
+            "LSTM_Spearman": 0.00707241611572065
+        },
+        {
+            "feature": "Flow IAT Mean",
+            "LSTM_MAE": 4464752.0,
+            "LSTM_RMSE": 5856728.589429427,
+            "Persistence_MAE": 5292348.0,
+            "Persistence_RMSE": 7202743.792643467,
+            "LSTM_Pearson": 0.6824155428456173,
+            "LSTM_Spearman": 0.6961359018294442
+        },
+        {
+            "feature": "Flow IAT Std",
+            "LSTM_MAE": 359151.125,
+            "LSTM_RMSE": 516088.0793042986,
+            "Persistence_MAE": 344180.1875,
+            "Persistence_RMSE": 624447.4457310239,
+            "LSTM_Pearson": 0.37387951583748125,
+            "LSTM_Spearman": 0.3709900207087841
+        },
+        {
+            "feature": "Flow IAT Max",
+            "LSTM_MAE": 6246499.0,
+            "LSTM_RMSE": 8620176.268690566,
+            "Persistence_MAE": 4735098.0,
+            "Persistence_RMSE": 10103072.741870169,
+            "LSTM_Pearson": 0.3755870029206373,
+            "LSTM_Spearman": 0.15295624901614926
+        },
+        {
+            "feature": "Flow IAT Min",
+            "LSTM_MAE": 45237.13671875,
+            "LSTM_RMSE": 62199.46855078426,
+            "Persistence_MAE": 0.024552788585424423,
+            "Persistence_RMSE": 0.1695931532564449,
+            "LSTM_Pearson": 0.021776634696337567,
+            "LSTM_Spearman": 0.030443616913925477
+        },
+        {
+            "feature": "Fwd IAT Tot",
+            "LSTM_MAE": 5043715.0,
+            "LSTM_RMSE": 6534385.913716453,
+            "Persistence_MAE": 6147812.5,
+            "Persistence_RMSE": 8301084.153162646,
+            "LSTM_Pearson": 0.5949601064439689,
+            "LSTM_Spearman": 0.610320892150065
+        },
+        {
+            "feature": "Fwd IAT Mean",
+            "LSTM_MAE": 4479614.0,
+            "LSTM_RMSE": 5880709.414707039,
+            "Persistence_MAE": 5284588.0,
+            "Persistence_RMSE": 7187319.372971261,
+            "LSTM_Pearson": 0.6802270146424778,
+            "LSTM_Spearman": 0.6944863000442462
+        },
+        {
+            "feature": "Fwd IAT Std",
+            "LSTM_MAE": 396911.21875,
+            "LSTM_RMSE": 556103.4502896022,
+            "Persistence_MAE": 342396.59375,
+            "Persistence_RMSE": 632199.1139506603,
+            "LSTM_Pearson": 0.39808743572493166,
+            "LSTM_Spearman": 0.36505943362491555
+        },
+        {
+            "feature": "Fwd IAT Max",
+            "LSTM_MAE": 5496699.5,
+            "LSTM_RMSE": 8069272.039176769,
+            "Persistence_MAE": 3582730.25,
+            "Persistence_RMSE": 9061006.55863442,
+            "LSTM_Pearson": 0.3369589442037132,
+            "LSTM_Spearman": 0.07703180574563975
+        },
+        {
+            "feature": "Fwd IAT Min",
+            "LSTM_MAE": 51313.12890625,
+            "LSTM_RMSE": 70561.84305982944,
+            "Persistence_MAE": 0.007015082519501448,
+            "Persistence_RMSE": 0.08375608944728406,
+            "LSTM_Pearson": -0.004523440752260991,
+            "LSTM_Spearman": -0.007569150048420739
+        },
+        {
+            "feature": "Bwd IAT Tot",
+            "LSTM_MAE": 2325080.25,
+            "LSTM_RMSE": 3363476.203158869,
+            "Persistence_MAE": 2365919.0,
+            "Persistence_RMSE": 4006080.257145131,
+            "LSTM_Pearson": 0.3931183526015066,
+            "LSTM_Spearman": 0.36698501963764796
+        },
+        {
+            "feature": "Bwd IAT Mean",
+            "LSTM_MAE": 248768.359375,
+            "LSTM_RMSE": 353384.81923251884,
+            "Persistence_MAE": 230548.09375,
+            "Persistence_RMSE": 414222.832861734,
+            "LSTM_Pearson": 0.2745497419112371,
+            "LSTM_Spearman": 0.3023623779696908
+        },
+        {
+            "feature": "Bwd IAT Std",
+            "LSTM_MAE": 256829.875,
+            "LSTM_RMSE": 339600.77757272584,
+            "Persistence_MAE": 262391.5625,
+            "Persistence_RMSE": 407796.0676220407,
+            "LSTM_Pearson": 0.3519385134424738,
+            "LSTM_Spearman": 0.29686016058165016
+        },
+        {
+            "feature": "Bwd IAT Max",
+            "LSTM_MAE": 19771276.0,
+            "LSTM_RMSE": 24091263.91532997,
+            "Persistence_MAE": 22491980.0,
+            "Persistence_RMSE": 31520198.411070954,
+            "LSTM_Pearson": 0.3099149345014331,
+            "LSTM_Spearman": 0.29283996519005506
+        },
+        {
+            "feature": "Bwd IAT Min",
+            "LSTM_MAE": 9331.6630859375,
+            "LSTM_RMSE": 10953.85484658255,
+            "Persistence_MAE": 0.0,
+            "Persistence_RMSE": 0.0,
+            "LSTM_Pearson": 0.0,
+            "LSTM_Spearman": 0.0
+        },
+        {
+            "feature": "Fwd PSH Flags",
+            "LSTM_MAE": 8.168600082397461,
+            "LSTM_RMSE": 11.635299222120643,
+            "Persistence_MAE": 8.298491477966309,
+            "Persistence_RMSE": 12.520386817489719,
+            "LSTM_Pearson": 0.36034960592617754,
+            "LSTM_Spearman": 0.31997090320986277
+        },
+        {
+            "feature": "Bwd PSH Flags",
+            "LSTM_MAE": 0.003385623451322317,
+            "LSTM_RMSE": 0.004301207343608004,
+            "Persistence_MAE": 0.0,
+            "Persistence_RMSE": 0.0,
+            "LSTM_Pearson": 0.0,
+            "LSTM_Spearman": 0.0
+        },
+        {
+            "feature": "Fwd URG Flags",
+            "LSTM_MAE": 0.01654035598039627,
+            "LSTM_RMSE": 0.02047036077717029,
+            "Persistence_MAE": 0.0,
+            "Persistence_RMSE": 0.0,
+            "LSTM_Pearson": 0.0,
+            "LSTM_Spearman": 0.0
+        },
+        {
+            "feature": "Bwd URG Flags",
+            "LSTM_MAE": 0.004664878826588392,
+            "LSTM_RMSE": 0.00609495516316079,
+            "Persistence_MAE": 0.0,
+            "Persistence_RMSE": 0.0,
+            "LSTM_Pearson": 0.0,
+            "LSTM_Spearman": 0.0
+        },
+        {
+            "feature": "Fwd Header Len",
+            "LSTM_MAE": 40096.80078125,
+            "LSTM_RMSE": 90225.2016234932,
+            "Persistence_MAE": 24970.005859375,
+            "Persistence_RMSE": 104838.02668879266,
+            "LSTM_Pearson": 0.10365529603833587,
+            "LSTM_Spearman": 0.10092597384345323
+        },
+        {
+            "feature": "Bwd Header Len",
+            "LSTM_MAE": 44086.40625,
+            "LSTM_RMSE": 100545.33417319771,
+            "Persistence_MAE": 41963.33203125,
+            "Persistence_RMSE": 124847.15826962182,
+            "LSTM_Pearson": 0.35640552890387783,
+            "LSTM_Spearman": 0.3405215302653987
+        },
+        {
+            "feature": "Fwd Pkts/s",
+            "LSTM_MAE": 16.56420135498047,
+            "LSTM_RMSE": 20.700891683787592,
+            "Persistence_MAE": 0.2229759246110916,
+            "Persistence_RMSE": 1.3139224745526357,
+            "LSTM_Pearson": 0.00770007996932489,
+            "LSTM_Spearman": 0.04359744485323725
+        },
+        {
+            "feature": "Bwd Pkts/s",
+            "LSTM_MAE": 0.3471892774105072,
+            "LSTM_RMSE": 2.383013107110082,
+            "Persistence_MAE": 0.4853052496910095,
+            "Persistence_RMSE": 3.2896294546890408,
+            "LSTM_Pearson": 0.23566052424227601,
+            "LSTM_Spearman": 0.17210892707082068
+        },
+        {
+            "feature": "Pkt Len Min",
+            "LSTM_MAE": 0.2605190575122833,
+            "LSTM_RMSE": 0.34786525615831354,
+            "Persistence_MAE": 0.0,
+            "Persistence_RMSE": 0.0,
+            "LSTM_Pearson": 0.0,
+            "LSTM_Spearman": 0.0
+        },
+        {
+            "feature": "Pkt Len Max",
+            "LSTM_MAE": 74.57954406738281,
+            "LSTM_RMSE": 121.13023240762398,
+            "Persistence_MAE": 81.0115737915039,
+            "Persistence_RMSE": 146.2561563875176,
+            "LSTM_Pearson": 0.21872897445810957,
+            "LSTM_Spearman": 0.22300780606369666
+        },
+        {
+            "feature": "Pkt Len Mean",
+            "LSTM_MAE": 109.64801788330078,
+            "LSTM_RMSE": 167.47406515636982,
+            "Persistence_MAE": 126.97804260253906,
+            "Persistence_RMSE": 226.81959550764128,
+            "LSTM_Pearson": 0.3233553918743492,
+            "LSTM_Spearman": 0.2712226995577215
+        },
+        {
+            "feature": "Pkt Len Std",
+            "LSTM_MAE": 23.45003890991211,
+            "LSTM_RMSE": 30.51784406134129,
+            "Persistence_MAE": 29.02239418029785,
+            "Persistence_RMSE": 39.258267254828795,
+            "LSTM_Pearson": 0.3059198747337255,
+            "LSTM_Spearman": 0.32305488020661316
+        },
+        {
+            "feature": "Pkt Len Var",
+            "LSTM_MAE": 9391.5595703125,
+            "LSTM_RMSE": 12594.556284363494,
+            "Persistence_MAE": 11034.2451171875,
+            "Persistence_RMSE": 15298.172962808336,
+            "LSTM_Pearson": 0.3631226774590832,
+            "LSTM_Spearman": 0.34991483020893244
+        },
+        {
+            "feature": "FIN Flag Cnt",
+            "LSTM_MAE": 1.3908509016036987,
+            "LSTM_RMSE": 2.3356106634723357,
+            "Persistence_MAE": 1.501227617263794,
+            "Persistence_RMSE": 2.7645853965845486,
+            "LSTM_Pearson": 0.24375092472210186,
+            "LSTM_Spearman": 0.22026881411284796
+        },
+        {
+            "feature": "SYN Flag Cnt",
+            "LSTM_MAE": 7.922950744628906,
+            "LSTM_RMSE": 11.627981808443803,
+            "Persistence_MAE": 8.298491477966309,
+            "Persistence_RMSE": 12.520386817489719,
+            "LSTM_Pearson": 0.36387648230254643,
+            "LSTM_Spearman": 0.320019638644143
+        },
+        {
+            "feature": "RST Flag Cnt",
+            "LSTM_MAE": 40.054317474365234,
+            "LSTM_RMSE": 56.04525454167039,
+            "Persistence_MAE": 13.706418991088867,
+            "Persistence_RMSE": 20.9985467317086,
+            "LSTM_Pearson": 0.7501926817351334,
+            "LSTM_Spearman": 0.38475234889171955
+        },
+        {
+            "feature": "PSH Flag Cnt",
+            "LSTM_MAE": 42.93156433105469,
+            "LSTM_RMSE": 62.3096828914355,
+            "Persistence_MAE": 35.66958999633789,
+            "Persistence_RMSE": 54.62971277224625,
+            "LSTM_Pearson": 0.7028906797571877,
+            "LSTM_Spearman": 0.5586326811606445
+        },
+        {
+            "feature": "ACK Flag Cnt",
+            "LSTM_MAE": 50.06207275390625,
+            "LSTM_RMSE": 69.81887840154695,
+            "Persistence_MAE": 25.659067153930664,
+            "Persistence_RMSE": 39.41803978322061,
+            "LSTM_Pearson": 0.646987989174294,
+            "LSTM_Spearman": 0.502517306035736
+        },
+        {
+            "feature": "URG Flag Cnt",
+            "LSTM_MAE": 7.0639262199401855,
+            "LSTM_RMSE": 18.75352668656202,
+            "Persistence_MAE": 7.749912261962891,
+            "Persistence_RMSE": 22.094096007059004,
+            "LSTM_Pearson": 0.4523063968739499,
+            "LSTM_Spearman": 0.4364303075738624
+        },
+        {
+            "feature": "CWE Flag Count",
+            "LSTM_MAE": 0.012004472315311432,
+            "LSTM_RMSE": 0.01645215999780388,
+            "Persistence_MAE": 0.0,
+            "Persistence_RMSE": 0.0,
+            "LSTM_Pearson": 0.0,
+            "LSTM_Spearman": 0.0
+        },
+        {
+            "feature": "ECE Flag Cnt",
+            "LSTM_MAE": 37.46586608886719,
+            "LSTM_RMSE": 52.39204395260076,
+            "Persistence_MAE": 13.707119941711426,
+            "Persistence_RMSE": 21.000434507688613,
+            "LSTM_Pearson": 0.835786824339575,
+            "LSTM_Spearman": 0.5032119126528402
+        },
+        {
+            "feature": "Down/Up Ratio",
+            "LSTM_MAE": 0.19689802825450897,
+            "LSTM_RMSE": 0.5025963132043756,
+            "Persistence_MAE": 0.263187438249588,
+            "Persistence_RMSE": 0.6578038529939971,
+            "LSTM_Pearson": 0.3487680747468267,
+            "LSTM_Spearman": 0.2933902337524656
+        },
+        {
+            "feature": "Pkt Size Avg",
+            "LSTM_MAE": 110.15641784667969,
+            "LSTM_RMSE": 167.67470483237776,
+            "Persistence_MAE": 126.97804260253906,
+            "Persistence_RMSE": 226.81959550764128,
+            "LSTM_Pearson": 0.32041749452346807,
+            "LSTM_Spearman": 0.2796258214842538
+        },
+        {
+            "feature": "Fwd Seg Size Avg",
+            "LSTM_MAE": 8.972042083740234,
+            "LSTM_RMSE": 11.819119006790636,
+            "Persistence_MAE": 11.610994338989258,
+            "Persistence_RMSE": 15.764327541228914,
+            "LSTM_Pearson": 0.30354833712516066,
+            "LSTM_Spearman": 0.30808659120670784
+        },
+        {
+            "feature": "Bwd Seg Size Avg",
+            "LSTM_MAE": 24.103025436401367,
+            "LSTM_RMSE": 31.19165353886006,
+            "Persistence_MAE": 25.47263526916504,
+            "Persistence_RMSE": 35.20356884984284,
+            "LSTM_Pearson": 0.4302734086187543,
+            "LSTM_Spearman": 0.36547676639484933
+        },
+        {
+            "feature": "Fwd Byts/b Avg",
+            "LSTM_MAE": 0.002883837092667818,
+            "LSTM_RMSE": 0.0037680821170732078,
+            "Persistence_MAE": 0.0,
+            "Persistence_RMSE": 0.0,
+            "LSTM_Pearson": 0.0,
+            "LSTM_Spearman": 0.0
+        },
+        {
+            "feature": "Fwd Pkts/b Avg",
+            "LSTM_MAE": 0.003972700797021389,
+            "LSTM_RMSE": 0.005203230639680667,
+            "Persistence_MAE": 0.0,
+            "Persistence_RMSE": 0.0,
+            "LSTM_Pearson": 0.0,
+            "LSTM_Spearman": 0.0
+        },
+        {
+            "feature": "Fwd Blk Rate Avg",
+            "LSTM_MAE": 0.007041111122816801,
+            "LSTM_RMSE": 0.009196966919693201,
+            "Persistence_MAE": 0.0,
+            "Persistence_RMSE": 0.0,
+            "LSTM_Pearson": 0.0,
+            "LSTM_Spearman": 0.0
+        },
+        {
+            "feature": "Bwd Byts/b Avg",
+            "LSTM_MAE": 0.004243510775268078,
+            "LSTM_RMSE": 0.005144739095977734,
+            "Persistence_MAE": 0.0,
+            "Persistence_RMSE": 0.0,
+            "LSTM_Pearson": 0.0,
+            "LSTM_Spearman": 0.0
+        },
+        {
+            "feature": "Bwd Pkts/b Avg",
+            "LSTM_MAE": 0.004777739755809307,
+            "LSTM_RMSE": 0.006648555800877144,
+            "Persistence_MAE": 0.0,
+            "Persistence_RMSE": 0.0,
+            "LSTM_Pearson": 0.0,
+            "LSTM_Spearman": 0.0
+        },
+        {
+            "feature": "Bwd Blk Rate Avg",
+            "LSTM_MAE": 0.00566458236426115,
+            "LSTM_RMSE": 0.007432918289155512,
+            "Persistence_MAE": 0.0,
+            "Persistence_RMSE": 0.0,
+            "LSTM_Pearson": 0.0,
+            "LSTM_Spearman": 0.0
+        },
+        {
+            "feature": "Subflow Fwd Pkts",
+            "LSTM_MAE": 199.642333984375,
+            "LSTM_RMSE": 243.6328484497729,
+            "Persistence_MAE": 2.2297592163085938,
+            "Persistence_RMSE": 13.139223947121732,
+            "LSTM_Pearson": 0.012950100314276325,
+            "LSTM_Spearman": -0.02279196736988595
+        },
+        {
+            "feature": "Subflow Fwd Byts",
+            "LSTM_MAE": 5839.58251953125,
+            "LSTM_RMSE": 7371.313044498925,
+            "Persistence_MAE": 138.2628631591797,
+            "Persistence_RMSE": 204.58460199878192,
+            "LSTM_Pearson": -0.025870382142069027,
+            "LSTM_Spearman": -0.032311323117238035
+        },
+        {
+            "feature": "Subflow Bwd Pkts",
+            "LSTM_MAE": 3.6163244247436523,
+            "LSTM_RMSE": 23.831444440919334,
+            "Persistence_MAE": 4.853052616119385,
+            "Persistence_RMSE": 32.89629738794227,
+            "LSTM_Pearson": 0.22749984804690748,
+            "LSTM_Spearman": 0.20676561801201276
+        },
+        {
+            "feature": "Subflow Bwd Byts",
+            "LSTM_MAE": 4796.06884765625,
+            "LSTM_RMSE": 33819.91649900987,
+            "Persistence_MAE": 6108.45458984375,
+            "Persistence_RMSE": 46777.006317206746,
+            "LSTM_Pearson": 0.23855050827079827,
+            "LSTM_Spearman": 0.24185698095100597
+        },
+        {
+            "feature": "Init Fwd Win Byts",
+            "LSTM_MAE": 3255.8505859375,
+            "LSTM_RMSE": 4195.080213774226,
+            "Persistence_MAE": 3920.076416015625,
+            "Persistence_RMSE": 5239.768124640632,
+            "LSTM_Pearson": 0.691284373776363,
+            "LSTM_Spearman": 0.7008622849270626
+        },
+        {
+            "feature": "Init Bwd Win Byts",
+            "LSTM_MAE": 5602.55126953125,
+            "LSTM_RMSE": 7124.598795721763,
+            "Persistence_MAE": 6672.22802734375,
+            "Persistence_RMSE": 8767.466680860554,
+            "LSTM_Pearson": 0.4185120597498547,
+            "LSTM_Spearman": 0.40966016205529127
+        },
+        {
+            "feature": "Fwd Act Data Pkts",
+            "LSTM_MAE": 5192.814453125,
+            "LSTM_RMSE": 6437.309686507245,
+            "Persistence_MAE": 312.1087341308594,
+            "Persistence_RMSE": 596.0835983735839,
+            "LSTM_Pearson": -0.027555574024395103,
+            "LSTM_Spearman": -0.014617009121864654
+        },
+        {
+            "feature": "Fwd Seg Size Min",
+            "LSTM_MAE": 1.6965956687927246,
+            "LSTM_RMSE": 2.740099772425796,
+            "Persistence_MAE": 1.4871975183486938,
+            "Persistence_RMSE": 3.6300317766044023,
+            "LSTM_Pearson": 0.13884337623550824,
+            "LSTM_Spearman": 0.1366450042166517
+        },
+        {
+            "feature": "Active Mean",
+            "LSTM_MAE": 80702.921875,
+            "LSTM_RMSE": 132746.84622995756,
+            "Persistence_MAE": 101583.171875,
+            "Persistence_RMSE": 173418.36027364575,
+            "LSTM_Pearson": 0.0866553870949737,
+            "LSTM_Spearman": 0.08072857015926249
+        },
+        {
+            "feature": "Active Std",
+            "LSTM_MAE": 39719.26171875,
+            "LSTM_RMSE": 60113.677911104394,
+            "Persistence_MAE": 52650.23046875,
+            "Persistence_RMSE": 81780.31215396528,
+            "LSTM_Pearson": 0.018604212403235787,
+            "LSTM_Spearman": 0.07618560627455857
+        },
+        {
+            "feature": "Active Max",
+            "LSTM_MAE": 27061178.0,
+            "LSTM_RMSE": 38374932.38066996,
+            "Persistence_MAE": 34498968.0,
+            "Persistence_RMSE": 45196102.198498845,
+            "LSTM_Pearson": -0.03126042409504279,
+            "LSTM_Spearman": -0.019481463644770606
+        },
+        {
+            "feature": "Active Min",
+            "LSTM_MAE": 2454.497802734375,
+            "LSTM_RMSE": 3272.8738136384054,
+            "Persistence_MAE": 0.0,
+            "Persistence_RMSE": 0.0,
+            "LSTM_Pearson": 0.0,
+            "LSTM_Spearman": 0.0
+        },
+        {
+            "feature": "Idle Mean",
+            "LSTM_MAE": 4340470.0,
+            "LSTM_RMSE": 5698036.5675148135,
+            "Persistence_MAE": 5198194.5,
+            "Persistence_RMSE": 7077394.649472644,
+            "LSTM_Pearson": 0.6985505359328045,
+            "LSTM_Spearman": 0.709105002196
+        },
+        {
+            "feature": "Idle Std",
+            "LSTM_MAE": 84687.984375,
+            "LSTM_RMSE": 157661.04157971303,
+            "Persistence_MAE": 78049.1015625,
+            "Persistence_RMSE": 180417.62326336085,
+            "LSTM_Pearson": 0.15260909292760014,
+            "LSTM_Spearman": 0.1681762052913915
+        },
+        {
+            "feature": "Idle Max",
+            "LSTM_MAE": 5312259.0,
+            "LSTM_RMSE": 7959285.028328612,
+            "Persistence_MAE": 3929323.0,
+            "Persistence_RMSE": 9324372.844464768,
+            "LSTM_Pearson": 0.31074763981134623,
+            "LSTM_Spearman": 0.07586598833482283
+        },
+        {
+            "feature": "Idle Min",
+            "LSTM_MAE": 65665.9765625,
+            "LSTM_RMSE": 85621.16822375177,
+            "Persistence_MAE": 0.0,
+            "Persistence_RMSE": 0.0,
+            "LSTM_Pearson": 0.0,
+            "LSTM_Spearman": 0.0
+        },
+        {
+            "feature": "flow_count",
+            "LSTM_MAE": 119.1017837524414,
+            "LSTM_RMSE": 176.38967205097356,
+            "Persistence_MAE": 107.48368835449219,
+            "Persistence_RMSE": 172.7023891970664,
+            "LSTM_Pearson": 0.6303866374394858,
+            "LSTM_Spearman": 0.5626235517394823
+        }
+    ],
+    "Configuration": {
+        "History_H": 20,
+        "Hidden_Size": 128,
+        "Layers": 2,
+        "Dropout": 0.2,
+        "Loss": "Huber",
+        "Optimizer": "Adam",
+        "Max_Epochs": 50,
+        "Patience": 7,
+        "Random_Seed": 42,
+        "Feature_Count": 77,
+        "Features": [
+            "Flow Duration",
+            "Tot Fwd Pkts",
+            "Tot Bwd Pkts",
+            "TotLen Fwd Pkts",
+            "TotLen Bwd Pkts",
+            "Fwd Pkt Len Max",
+            "Fwd Pkt Len Min",
+            "Fwd Pkt Len Mean",
+            "Fwd Pkt Len Std",
+            "Bwd Pkt Len Max",
+            "Bwd Pkt Len Min",
+            "Bwd Pkt Len Mean",
+            "Bwd Pkt Len Std",
+            "Flow Byts/s",
+            "Flow Pkts/s",
+            "Flow IAT Mean",
+            "Flow IAT Std",
+            "Flow IAT Max",
+            "Flow IAT Min",
+            "Fwd IAT Tot",
+            "Fwd IAT Mean",
+            "Fwd IAT Std",
+            "Fwd IAT Max",
+            "Fwd IAT Min",
+            "Bwd IAT Tot",
+            "Bwd IAT Mean",
+            "Bwd IAT Std",
+            "Bwd IAT Max",
+            "Bwd IAT Min",
+            "Fwd PSH Flags",
+            "Bwd PSH Flags",
+            "Fwd URG Flags",
+            "Bwd URG Flags",
+            "Fwd Header Len",
+            "Bwd Header Len",
+            "Fwd Pkts/s",
+            "Bwd Pkts/s",
+            "Pkt Len Min",
+            "Pkt Len Max",
+            "Pkt Len Mean",
+            "Pkt Len Std",
+            "Pkt Len Var",
+            "FIN Flag Cnt",
+            "SYN Flag Cnt",
+            "RST Flag Cnt",
+            "PSH Flag Cnt",
+            "ACK Flag Cnt",
+            "URG Flag Cnt",
+            "CWE Flag Count",
+            "ECE Flag Cnt",
+            "Down/Up Ratio",
+            "Pkt Size Avg",
+            "Fwd Seg Size Avg",
+            "Bwd Seg Size Avg",
+            "Fwd Byts/b Avg",
+            "Fwd Pkts/b Avg",
+            "Fwd Blk Rate Avg",
+            "Bwd Byts/b Avg",
+            "Bwd Pkts/b Avg",
+            "Bwd Blk Rate Avg",
+            "Subflow Fwd Pkts",
+            "Subflow Fwd Byts",
+            "Subflow Bwd Pkts",
+            "Subflow Bwd Byts",
+            "Init Fwd Win Byts",
+            "Init Bwd Win Byts",
+            "Fwd Act Data Pkts",
+            "Fwd Seg Size Min",
+            "Active Mean",
+            "Active Std",
+            "Active Max",
+            "Active Min",
+            "Idle Mean",
+            "Idle Std",
+            "Idle Max",
+            "Idle Min",
+            "flow_count"
+        ]
+    }
+}
