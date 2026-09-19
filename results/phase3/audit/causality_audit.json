@@ -1,0 +1,5 @@
+{
+    "leakage_passed": true,
+    "chronological_passed": true,
+    "missing_windows_policy": "Zero-flow windows omitted (inactive). No auto-filling. Transitions represent causally coherent observed traffic states."
+}

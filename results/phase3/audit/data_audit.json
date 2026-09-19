@@ -1,0 +1,130 @@
+{
+    "total_raw_rows": 16233002,
+    "total_valid_rows": 16232929,
+    "total_invalid_rows": 14,
+    "total_repeated_headers": 59,
+    "total_zero_duration_flows": 95760,
+    "total_states": 28706,
+    "file_stats": [
+        {
+            "file": "02-14-2018.csv",
+            "raw_rows": 1048575,
+            "valid_rows": 1048570,
+            "invalid_rows": 5,
+            "repeated_headers": 0,
+            "zero_duration_flows": 3824,
+            "attack_windows": 1130,
+            "benign_windows": 2125,
+            "time_range": "2018-02-14 01:00:00 -> 2018-02-14 12:59:50",
+            "state_count": 3255
+        },
+        {
+            "file": "02-15-2018.csv",
+            "raw_rows": 1048575,
+            "valid_rows": 1048575,
+            "invalid_rows": 0,
+            "repeated_headers": 0,
+            "zero_duration_flows": 8027,
+            "attack_windows": 341,
+            "benign_windows": 3088,
+            "time_range": "2018-02-15 01:00:00 -> 2018-02-15 12:59:50",
+            "state_count": 3429
+        },
+        {
+            "file": "02-16-2018.csv",
+            "raw_rows": 1048575,
+            "valid_rows": 1048574,
+            "invalid_rows": 0,
+            "repeated_headers": 1,
+            "zero_duration_flows": 0,
+            "attack_windows": 297,
+            "benign_windows": 203,
+            "time_range": "2018-02-16 01:00:30 -> 2018-02-16 12:58:20",
+            "state_count": 500
+        },
+        {
+            "file": "02-20-2018.csv",
+            "raw_rows": 7948748,
+            "valid_rows": 7948748,
+            "invalid_rows": 0,
+            "repeated_headers": 0,
+            "zero_duration_flows": 59453,
+            "attack_windows": 434,
+            "benign_windows": 3870,
+            "time_range": "2018-02-20 01:00:00 -> 2018-02-20 12:59:50",
+            "state_count": 4304
+        },
+        {
+            "file": "02-21-2018.csv",
+            "raw_rows": 1048575,
+            "valid_rows": 1048575,
+            "invalid_rows": 0,
+            "repeated_headers": 0,
+            "zero_duration_flows": 0,
+            "attack_windows": 275,
+            "benign_windows": 362,
+            "time_range": "2018-02-21 01:55:40 -> 2018-02-21 10:43:20",
+            "state_count": 637
+        },
+        {
+            "file": "02-22-2018.csv",
+            "raw_rows": 1048575,
+            "valid_rows": 1048566,
+            "invalid_rows": 9,
+            "repeated_headers": 0,
+            "zero_duration_flows": 5610,
+            "attack_windows": 164,
+            "benign_windows": 3126,
+            "time_range": "2018-02-22 01:00:00 -> 2018-02-22 12:59:50",
+            "state_count": 3290
+        },
+        {
+            "file": "02-23-2018.csv",
+            "raw_rows": 1048575,
+            "valid_rows": 1048575,
+            "invalid_rows": 0,
+            "repeated_headers": 0,
+            "zero_duration_flows": 5708,
+            "attack_windows": 258,
+            "benign_windows": 3077,
+            "time_range": "2018-02-23 01:00:00 -> 2018-02-23 12:59:50",
+            "state_count": 3335
+        },
+        {
+            "file": "02-28-2018.csv",
+            "raw_rows": 613104,
+            "valid_rows": 613071,
+            "invalid_rows": 0,
+            "repeated_headers": 33,
+            "zero_duration_flows": 6169,
+            "attack_windows": 798,
+            "benign_windows": 2608,
+            "time_range": "2018-02-28 01:00:00 -> 2018-02-28 12:59:50",
+            "state_count": 3406
+        },
+        {
+            "file": "03-01-2018.csv",
+            "raw_rows": 331125,
+            "valid_rows": 331100,
+            "invalid_rows": 0,
+            "repeated_headers": 25,
+            "zero_duration_flows": 2919,
+            "attack_windows": 930,
+            "benign_windows": 2477,
+            "time_range": "2018-03-01 01:00:00 -> 2018-03-01 12:59:50",
+            "state_count": 3407
+        },
+        {
+            "file": "03-02-2018.csv",
+            "raw_rows": 1048575,
+            "valid_rows": 1048575,
+            "invalid_rows": 0,
+            "repeated_headers": 0,
+            "zero_duration_flows": 4050,
+            "attack_windows": 2045,
+            "benign_windows": 1098,
+            "time_range": "2018-03-02 01:00:00 -> 2018-03-02 12:59:50",
+            "state_count": 3143
+        }
+    ]
+}
